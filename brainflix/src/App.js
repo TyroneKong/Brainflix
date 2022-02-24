@@ -5,21 +5,17 @@ import "./assets/Font/AvenirNextLTPro-Bold.otf";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import videosArray from "./Data/videos.json";
-import videoDetails from "./Data/video-details.json" ;
+import videoDetails from "./Data/video-details.json";
 import About from "./components/about";
 import Comments from "./components/comments";
 import Conversation from "./components/conversation";
 import Video from "./components/nextVideo";
 
+const videoArray = videosArray.map((video) => video);
+console.log(videoArray);
 
-
-const videoArray = videosArray.map(video => video)
-console.log(videoArray)
-
-const videoDetailsArray = videoDetails.map(video => video)
-console.log(videoDetailsArray[0].title)
-
-
+const videoDetailsArray = videoDetails.map((video) => video);
+console.log(videoDetailsArray[0].title);
 
 const comments = [
   {
@@ -46,14 +42,11 @@ const result = comments.map((comment) => comment);
 console.log(result);
 
 class App extends React.Component {
-
-  state ={
+  state = {
     currenttitle: videoDetailsArray[0].title,
     currentVideo: videoDetailsArray[0].video,
-    currentVideoImage: videoDetailsArray[0].image
-  }
-
-
+    currentVideoImage: videoDetailsArray[0].image,
+  };
 
   render() {
     return (
@@ -61,31 +54,34 @@ class App extends React.Component {
         <div className="wrapper">
           <Header />
 
-          <Hero  video={this.currentVideo} image={this.currentVideoImage}/>
+          <Hero video={this.currentVideo} image={this.currentVideoImage} />
 
           <About />
 
-
-        <Conversation/>
+          <Conversation />
 
           {comments.map((comment) => {
             return (
-            <Comments
-              name={comment.Name}
-              date={comment.Date}
-              comment={comment.Comment}
-            />
-            )
+              <Comments
+                name={comment.Name}
+                date={comment.Date}
+                comment={comment.Comment}
+              />
+            );
           })}
-
-<h3 className="next__videos-heading">NEXT VIDEOS</h3>
-         {videoArray.map(video =>{
-           return (
-          video.title !== this.currenttitle&&<Video title={video.title} channel={video.channel} image={video.image}/>
-            
-         )
-        })}
-
+          
+          <h3 className="next__videos-heading">NEXT VIDEOS</h3>
+          {videoArray.map((video) => {
+            return (
+              video.title !== this.currenttitle && (
+                <Video
+                  title={video.title}
+                  channel={video.channel}
+                  image={video.image}
+                />
+              )
+            );
+          })}
         </div>
       </div>
     );

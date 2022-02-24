@@ -4,8 +4,8 @@ const Video=(props)=>{
         <section className="next">
       <div className="next__videos">
         
-        <ul>
-        <li>{props.title}</li>
+        <ul >
+        <li >{props.title}</li>
         <li>{props.channel}</li>
         <li><img src={props.image}></img></li>
 

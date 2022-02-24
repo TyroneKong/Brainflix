@@ -12,6 +12,7 @@ const Header=(props)=>{
         </div>
         
         <div className="search">
+           
           <input className="search__input" placeholder= "Search"></input>
           <div className="search__avatar">
           
@@ -19,7 +20,8 @@ const Header=(props)=>{
         </div>
      
         <div className="upload">
-          <button className="upload__button">UPLOAD</button>
+       
+          <button className="upload__button">  <img className="upload__icon"  src={uploadSVG}></img> UPLOAD</button>
         </div>
         <div className="upload__tablet-avatar">
 

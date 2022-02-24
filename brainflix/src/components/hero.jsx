@@ -11,7 +11,7 @@ return (
     <>
     <section className="hero">
     <div className="hero__container">
-    <video  poster={props.image} className="" width="750" height="500" controls>
+    <video poster={props.image}  className="hero__video" width="750" height="500" controls>
         <source src={props.video}></source>
     </video>
     </div>
@@ -23,8 +23,12 @@ return (
     <section className="statistics">
     <p className="statistics__paragraph">By Red Crow</p>
     <p className="statistic__date"></p>
-    <p className="statistics__views">{viewIcon}</p>
-    <p className="statistics__likes">{likes}</p>
+    <div className="statistics__icons">
+    <img src={viewIcon} className="statistics__views"></img>
+    <img src={likes}    className="statistics__likes"></img>
+        
+    </div>
+  
     </section>
     </>
     

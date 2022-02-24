@@ -50,6 +50,9 @@ body{
 }
 
 .upload{
+  &__icon{
+  
+  }
   &__button{
     width: 90vw;
     border-radius: .375rem;
@@ -115,7 +118,8 @@ body{
     
   }
   &__comment{
-    margin: .625rem .625rem;
+    list-style: none;
+    margin: .625rem 1.25rem;
   }
 
 &__comment-container{
@@ -162,10 +166,10 @@ body{
   list-style: none;
 }
 
-.comment-container img {
+.comment-contain img {
   height: 2.25rem;
   width: 2.25rem;
-  background-color: $mercury;
+ 
   border-radius: 50%;
  
 }
@@ -175,22 +179,6 @@ body{
   color: #000000;
 }
 
-input {
-  width: 83%;
-  border: 0.0625rem solid $mercury;
-  height: 4.25rem;
-  &:invalid {
-    border-color: #c00000;
-  }
-  &:active {
-    border-color: $brainflixBlack;
-  }
-  &:focus {
-    outline: none;
-  }
-
-
-}
 
 
 textarea {
@@ -229,48 +217,43 @@ button:hover {
 }
 
 .comment {
+  margin-top: 20px;
   width: 100%;
 
   display: flex;
   flex-direction: column;
+  
 
-  &-section{
+  &-section {
     display: flex;
     flex-direction: column;
   }
-  &__date{
+  &__date {
     display: flex;
-  justify-content: flex-end;
-  color: $silver;
+    justify-content: flex-end;
+    color: $silver;
   }
-  &__name{
-    position: relative;
-    bottom: 1.5rem;
-    left: 0.625rem;
+  &__name {
+    list-style: none;
+    margin-left: 10px;
+  
+  }
+  &__item {
+    margin-left: 0.625rem;
+  }
+  &-container {
+    margin: 1.25rem 0.625rem;
    
-}
-&__item{
-  margin-top: -1.875rem;
-  margin-left: 0.625re
-}
-&-container{
-  margin: 1.25rem .625rem;
+  &__deleteBtn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3.125rem;
+  
+  }
+  &__deleteBtn {
+    font-size: 1rem;
 
-}
-&__deleteBtn-container{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 3.125rem;
-
-}
-&__deleteBtn{
-
-  font-size: 1rem;
- 
-
-}
-
-
+  }
 }
 
 .divide{
@@ -293,7 +276,7 @@ label {
   }
 }
 
-
+}
 //Footer section
 // @include footer;
 
@@ -362,7 +345,9 @@ label {
     @include sectionheaderMobile;
     margin: 1.875rem 1.25rem;
   }
-
+  &__video{
+    width: 100vw;
+  }
 }
 
 
@@ -370,6 +355,11 @@ label {
   &__paragraph{
     @include subheaderMobile;
     margin-left: 1.25rem;
+  }
+  &__icons{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -387,8 +377,9 @@ label {
 .conversation {
   @include tablet{
 
-  &__form * {
-    box-sizing: border-box;
+  &__form  {
+  display: flex;
+  
   }
 
 &__label-heading{
@@ -589,16 +580,22 @@ label {
 
 
 .next{
+  margin-left: 1.25rem;
   &__videos{
     display: flex;
+ 
   }
   &__videos-heading{
-    color: $silver;
+    margin-left: 1.25rem;
+    color: $silver; 
   }
 }
 
 
 .next img{
   border-radius: .375rem;
-  width: 200px;
+  width: 40vw
+}
+.next li{
+  list-style: none;
 }

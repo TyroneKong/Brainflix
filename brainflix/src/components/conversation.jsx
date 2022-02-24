@@ -30,8 +30,9 @@ const Conversation=()=>{
     </div>
     `
   </div>
-  <hr className="divide" />
+
 </form>
+<hr className="divide" />
 </section>
     )
 }
