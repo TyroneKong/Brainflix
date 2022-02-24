@@ -1,10 +1,16 @@
 import "./App.scss";
-import "./Data/videos.json";
+import videosArray from "./Data/videos.json";
+import videoDetails from "./Data/video-details.json" 
 import brainflixLogo from "./assets/Logo/BrainFlix-logo.svg";
-import axios from "axios";
 import uploadSVG from "./assets/Icons/upload.svg"
 import './assets/Font/AvenirNextLTPro-Bold.otf'
 
+
+const videoArray = videosArray.map(video => video)
+console.log(videoArray)
+
+const videoDetailsArray = videoDetails.map(video => video)
+console.log(videoDetailsArray[0].video)
 
 
 
@@ -35,7 +41,8 @@ function App(props) {
       </header>
       <section className="video">
         <div className="video__container">
-          <video className="video__content">Placeholder for video</video>
+        <video className="video" src={videoDetailsArray[0].name} width="750" height="500" controls>
+     </video>
         </div>
         <div className="video__title-container">
           <h2 className="video__title-heading">BMX Rampage: 2021 Highlights</h2>
