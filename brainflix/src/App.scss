@@ -156,6 +156,9 @@ body{
 
 
 .comment__list {
+  @include bodycopyMobile;
+  margin-left: 50px;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -354,7 +357,7 @@ label {
 }
 
 
-.video{
+.hero{
   &__title-container{
     @include sectionheaderMobile;
     margin: 1.875rem 1.25rem;
@@ -586,9 +589,16 @@ label {
 
 
 .next{
+  &__videos{
+    display: flex;
+  }
   &__videos-heading{
     color: $silver;
   }
 }
 
 
+.next img{
+  border-radius: .375rem;
+  width: 200px;
+}
