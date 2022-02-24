@@ -1,0 +1,594 @@
+//font styles
+@use "./styles/partials/mixin" as *;
+@use "./styles/partials/variables" as *;
+
+
+
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:$font-style, sans-serif;
+  overflow-x: hidden !important;
+}
+
+
+/* mobile */
+
+/* Header*/
+
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+&__logo-image{
+  width: 7.5rem;
+  height: 3.125rem;
+}
+
+}
+
+.search{
+  display: flex;
+&__input{
+  border-radius: .375rem;
+  padding: 0 1.875rem;
+  width: 70vw;
+} 
+&__avatar{
+  border-radius: 1.5625rem;
+  height: 3.125rem;
+  width: 3.125rem;  
+  background-image: url("./assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+}
+}
+
+.upload{
+  &__button{
+    width: 90vw;
+    border-radius: .375rem;
+    border: none;
+  }
+}
+
+
+.video{
+  &__title-container{
+    @include sectionheaderMobile;
+    margin: 1.875rem 1.25rem;
+  }
+
+}
+
+
+.statistics{
+  &__paragraph{
+    @include subheaderMobile;
+    margin-left: 1.25rem;
+  }
+}
+
+.about{
+  &__paragraph{
+    @include bodycopyMobile;
+    margin: 1.25rem 1.25rem;
+  }
+}
+
+
+
+/* conversation section */
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+
+  &__form * {
+    box-sizing: border-box;
+  }
+
+
+ 
+
+&__label-heading{
+  display: flex;
+  color: $silver;
+}
+
+  &__avatar {
+    height: 2.25rem;
+    width: 2.25rem;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("./assets/Images/Mohan-muruge.jpg");
+    position: relative;
+    bottom: -4.375rem;
+    right: -0.625rem;
+    
+  }
+  &__comment{
+    margin: .625rem .625rem;
+  }
+
+&__comment-container{
+  margin-left: .625rem;
+  width: 170%;
+
+}
+  &__label-name{
+    position: relative;
+    top: -1.875rem;
+    right: -3.125rem;
+  }
+  &__label-comment{
+    position: relative;
+    top: 1.5rem;
+    right: -3.75rem;
+   
+}
+&__input-border-red{
+  border: 1px solid #D22D2D;
+}
+
+
+&__avatar-img {
+  position: relative;
+  right: 2.5rem;
+  top: 3.75rem;
+ 
+}
+&__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+
+}
+}
+
+
+.comment__list {
+  list-style: none;
+}
+
+.comment-container img {
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: $mercury;
+  border-radius: 50%;
+ 
+}
+
+
+::placeholder {
+  color: #000000;
+}
+
+input {
+  width: 83%;
+  border: 0.0625rem solid $mercury;
+  height: 4.25rem;
+  &:invalid {
+    border-color: #c00000;
+  }
+  &:active {
+    border-color: $brainflixBlack;
+  }
+  &:focus {
+    outline: none;
+  }
+
+
+}
+
+
+textarea {
+  margin: 3rem 3.125rem;
+  width: 80vw;
+  height: 7vh;
+  border: 0.0625rem solid $mercury;
+  
+}
+
+
+
+button {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: .375rem;
+  width:70vw;
+  color: #ffff;
+  background-color: $brainflixBlue;
+  height: 3.5rem;
+  margin: 0.625rem;
+
+    
+}
+
+//primary CTA hover
+button:hover {
+  background-color: #000000;
+}
+
+.divider {
+  border-top: 0.0625rem solid $mercury;
+  margin-bottom: -0.625rem;
+
+}
+
+.comment {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &-section{
+    display: flex;
+    flex-direction: column;
+  }
+  &__date{
+    display: flex;
+  justify-content: flex-end;
+  color: $silver;
+  }
+  &__name{
+    position: relative;
+    bottom: 1.5rem;
+    left: 0.625rem;
+   
+}
+&__item{
+  margin-top: -1.875rem;
+  margin-left: 0.625re
+}
+&-container{
+  margin: 1.25rem .625rem;
+
+}
+&__deleteBtn-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3.125rem;
+
+}
+&__deleteBtn{
+
+  font-size: 1rem;
+ 
+
+}
+
+
+}
+
+.divide{
+  margin-top: 1.875rem;
+  border:1px solid $mercury ;
+}
+
+
+
+label {
+  display: block;
+  margin: 0.0625rem;
+  padding: 0.0625rem;
+}
+
+
+.next{
+  &__videos-heading{
+    color: $silver;
+  }
+}
+
+
+//Footer section
+// @include footer;
+
+
+/* tablet*/
+
+
+
+.header{
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  &__logo-image{
+    width: 7.5rem;
+    height: 3.125rem;
+  }
+  
+  }
+ 
+}
+
+.search{
+  @include tablet{
+    display: flex;
+    &__input{
+      border-radius: .375rem;
+      padding: 0 1.875rem;
+      width: 50vw;
+    } 
+  }
+
+&__avatar{
+  @include tablet{
+    display: none;
+    
+  }
+
+}
+}
+
+.upload{
+  @include tablet{
+    &__button{
+      width: 15vw;
+      border-radius: .375rem;
+      border: none;
+    }
+  }
+&__tablet-avatar{
+  display: none;
+  @include tablet{
+  display: block;
+  border-radius: 1.5625rem;
+  height: 3.125rem;
+  width: 3.125rem;  
+  background-image: url("./assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  }
+}
+}
+
+
+.video{
+  &__title-container{
+    @include sectionheaderMobile;
+    margin: 1.875rem 1.25rem;
+  }
+
+}
+
+
+.statistics{
+  &__paragraph{
+    @include subheaderMobile;
+    margin-left: 1.25rem;
+  }
+}
+
+.about{
+  &__paragraph{
+    @include bodycopyMobile;
+    margin: 1.25rem 1.25rem;
+  }
+}
+
+
+
+/* conversation section */
+
+.conversation {
+  @include tablet{
+
+  &__form * {
+    box-sizing: border-box;
+  }
+
+&__label-heading{
+  display: flex;
+  color: $silver;
+}
+
+  &__avatar {
+    height: 2.25rem;
+    width: 2.25rem;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("./assets/Images/Mohan-muruge.jpg");
+    position: relative;
+    bottom: -4.375rem;
+    right: -0.625rem;
+    
+  }
+  &__comment{
+    margin: .625rem .625rem;
+  }
+
+&__comment-container{
+  margin-left: .625rem;
+  width: 170%;
+
+}
+  &__label-name{
+    position: relative;
+    top: -1.875rem;
+    right: -3.125rem;
+  }
+  &__label-comment{
+    position: relative;
+    top: 1.5rem;
+    right: -3.75rem;
+   
+}
+&__input-border-red{
+  border: 1px solid #D22D2D;
+}
+
+
+&__avatar-img {
+  position: relative;
+  right: 2.5rem;
+  top: 3.75rem;
+ 
+}
+&__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+
+}
+}
+}
+
+.comment__list {
+  list-style: none;
+}
+
+.comment-container img {
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: $mercury;
+  border-radius: 50%;
+ 
+}
+
+
+::placeholder {
+  color: #000000;
+}
+
+input {
+  width: 83%;
+  border: 0.0625rem solid $mercury;
+  height: 4.25rem;
+  &:invalid {
+    border-color: #c00000;
+  }
+  &:active {
+    border-color: $brainflixBlack;
+  }
+  &:focus {
+    outline: none;
+  }
+
+
+}
+
+
+textarea {
+  margin: 3rem 3.125rem;
+  width: 80vw;
+  height: 7vh;
+  border: 0.0625rem solid $mercury;
+  
+}
+
+
+
+button {
+  @include tablet{
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: .375rem;
+    width:40vw;
+    color: #ffff;
+    background-color: $brainflixBlue;
+    height: 3.5rem;
+    margin: 0.625rem;
+  
+  }
+ 
+    
+}
+
+//primary CTA hover
+button:hover {
+  background-color: #000000;
+}
+
+.divider {
+  border-top: 0.0625rem solid $mercury;
+  margin-bottom: -0.625rem;
+
+}
+
+.comment {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__section{
+   @include tablet{
+  
+   }
+  }
+  &__text-area{
+    @include tablet{
+      
+    }
+  }
+
+
+  &__date{
+    display: flex;
+  justify-content: flex-end;
+  color: $silver;
+  }
+  &__name{
+    position: relative;
+    bottom: 1.5rem;
+    left: 0.625rem;
+   
+}
+&__item{
+  margin-top: -1.875rem;
+  margin-left: 0.625re
+}
+&-container{
+  margin: 1.25rem .625rem;
+
+}
+&__deleteBtn-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3.125rem;
+
+}
+&__deleteBtn{
+
+  font-size: 1rem;
+ 
+
+}
+
+
+}
+
+.divide{
+  margin-top: 1.875rem;
+  border:1px solid $mercury ;
+}
+
+
+
+label {
+  display: block;
+  margin: 0.0625rem;
+  padding: 0.0625rem;
+}
+
+
+.next{
+  &__videos-heading{
+    color: $silver;
+  }
+}
+
+
