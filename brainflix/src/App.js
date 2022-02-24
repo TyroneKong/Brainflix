@@ -41,12 +41,32 @@ const comments = [
 const result = comments.map((comment) => comment);
 console.log(result);
 
+
+
+
+
+
+
+
+
+
+
+
+
 class App extends React.Component {
   state = {
     currenttitle: videoDetailsArray[0].title,
     currentVideo: videoDetailsArray[0].video,
     currentVideoImage: videoDetailsArray[0].image,
+    currentVideoObject: videoDetailsArray[0],
+    allVideos: videoDetailsArray
   };
+
+  handleClick=(videoid)=>{
+const foundVideo = this.state.allVideos.find(video => video.id === videoid)
+this.setState({currentVideoObject:foundVideo})
+console.log(foundVideo)
+  }
 
   render() {
     return (
@@ -54,7 +74,7 @@ class App extends React.Component {
         <div className="wrapper">
           <Header />
 
-          <Hero video={this.currentVideo} image={this.currentVideoImage} />
+          <Hero video={this.state.currentVideo} image={this.state.currentVideoImage} current={this.state.currentVideoObject}/>
 
           <About />
 
@@ -71,13 +91,16 @@ class App extends React.Component {
           })}
           
           <h3 className="next__videos-heading">NEXT VIDEOS</h3>
-          {videoArray.map((video) => {
+          {videoArray.filter(video=> video.id !== this.state.currentVideoObject.id).map((video) => {
             return (
               video.title !== this.currenttitle && (
                 <Video
+                id={video.id}
                   title={video.title}
                   channel={video.channel}
                   image={video.image}
+                  func={this.handleClick}
+
                 />
               )
             );
