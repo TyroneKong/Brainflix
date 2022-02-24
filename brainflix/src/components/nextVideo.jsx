@@ -1,17 +1,17 @@
-const Video = (props) => {
+const Video = ({func, title, channel, image, id}) => {
   return (
     <section className="next">
       <div
         className="next__videos"
         onClick={(event) => {
-          props.func(props.id);
+          func(id);
         }}
       >
         <ul>
-          <li>{props.title}</li>
-          <li>{props.channel}</li>
+          <li>{title}</li>
+          <li>{channel}</li>
           <li>
-            <img src={props.image}></img>
+            <img className="next__image" src={image}></img>
           </li>
         </ul>
       </div>

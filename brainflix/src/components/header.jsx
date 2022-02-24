@@ -12,7 +12,7 @@ const Header=(props)=>{
         </div>
         
         <div className="search">
-           
+           <img className="search__icon" src={searchIcon}></img>
           <input className="search__input" placeholder= "Search"></input>
           <div className="search__avatar">
           

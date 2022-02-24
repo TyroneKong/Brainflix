@@ -6,15 +6,14 @@ const Conversation=()=>{
 <form name="form" className="conversation__form">
   <div className="comment__section">
     <div className="conversation__comment-container">
-      <div className="comment__avatar"></div>
 
       <div className="conversation__avatar"></div>
       <div className="conversation__label-comment">
-        <label for="comment" className="conversation__label-heading">
+        <label htmlFor="comment" className="conversation__label-heading">
           JOIN THE CONVERSATION
         </label>
       </div>
-      <div className="comment__textarea">
+      
         <textarea
           id="comment"
           className="text"
@@ -22,7 +21,7 @@ const Conversation=()=>{
           placeholder="Add a new comment"
           required
         ></textarea>
-      </div>
+      
     </div>
     `
     <div className="conversation__btn">

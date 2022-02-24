@@ -2,89 +2,93 @@
 @use "./styles/partials/mixin" as *;
 @use "./styles/partials/variables" as *;
 
-
-
 /* reset */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family:$font-style, sans-serif;
+body {
+  font-family: $font-style, sans-serif;
   overflow-x: hidden !important;
 }
-
 
 /* mobile */
 
 /* Header*/
 
-
-.header{
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
-&__logo-image{
-  width: 7.5rem;
-  height: 3.125rem;
-}
-
-}
-
-.search{
-  display: flex;
-&__input{
-  border-radius: .375rem;
-  padding: 0 1.875rem;
-  width: 70vw;
-} 
-&__avatar{
-  border-radius: 1.5625rem;
-  height: 3.125rem;
-  width: 3.125rem;  
-  background-image: url("./assets/Images/Mohan-muruge.jpg");
-  background-size: cover;
-}
-}
-
-.upload{
-  &__icon{
-  
+  &__logo-image {
+    width: 7.5rem;
+    height: 3.125rem;
   }
-  &__button{
-    width: 90vw;
-    border-radius: .375rem;
+}
+
+.search {
+  margin-right: 30px;
+  display: flex;
+  &__input {
+    border-radius: 0.375rem;
+    padding: 0 1.875rem;
+    width: 70vw;
+  }
+  &__icon {
+    position: relative;
+    left: 20px;
+  }
+  &__avatar {
+    border-radius: 1.5625rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    background-image: url("./assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+  }
+}
+
+.upload {
+  margin-right: 110px;
+  &__button {
+    width: 80vw;
+    border-radius: 0.375rem;
     border: none;
   }
+  &__icon{
+    position: relative;
+    right: 20px
+  }
 }
 
-
-.video{
-  &__title-container{
+.hero {
+  &__title-container {
     @include sectionheaderMobile;
     margin: 1.875rem 1.25rem;
   }
-
-}
-
-
-.statistics{
-  &__paragraph{
-    @include subheaderMobile;
-    margin-left: 1.25rem;
+  &__video {
+    margin-top: 20px;
+    object-fit:cover;
   }
 }
 
-.about{
-  &__paragraph{
+.statistics {
+  &__paragraph {
+    @include subheaderMobile;
+    margin-left: 1.25rem;
+  }
+  &__icons {
+    margin-left: 500px;
+  }
+}
+
+.about {
+  &__paragraph {
     @include bodycopyMobile;
     margin: 1.25rem 1.25rem;
   }
 }
-
-
 
 /* conversation section */
 
@@ -98,66 +102,56 @@ body{
     box-sizing: border-box;
   }
 
-
- 
-
-&__label-heading{
-  display: flex;
-  color: $silver;
-}
+  &__label-heading {
+    display: flex;
+    color: $silver;
+  }
 
   &__avatar {
-    height: 2.25rem;
-    width: 2.25rem;
-    background-size: cover;
-    border-radius: 50%;
+    border-radius: 1.5625rem;
+    height: 3.125rem;
+    width: 3.125rem;
     background-image: url("./assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
     position: relative;
-    bottom: -4.375rem;
+    bottom: -6.375rem;
     right: -0.625rem;
-    
   }
-  &__comment{
+  &__comment {
     list-style: none;
-    margin: .625rem 1.25rem;
+    margin: 0.625rem 1.25rem;
   }
 
-&__comment-container{
-  margin-left: .625rem;
-  width: 170%;
-
-}
-  &__label-name{
+  &__comment-container {
+    margin-left: 0.625rem;
+    width: 170%;
+  }
+  &__label-name {
     position: relative;
     top: -1.875rem;
     right: -3.125rem;
   }
-  &__label-comment{
+  &__label-comment {
     position: relative;
     top: 1.5rem;
     right: -3.75rem;
-   
-}
-&__input-border-red{
-  border: 1px solid #D22D2D;
-}
+  }
+  &__input-border-red {
+    border: 1px solid #d22d2d;
+  }
 
-
-&__avatar-img {
-  position: relative;
-  right: 2.5rem;
-  top: 3.75rem;
- 
+  &__avatar-img {
+    position: relative;
+    right: 2.5rem;
+    top: 3.75rem;
+  }
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+  }
 }
-&__btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-
-}
-}
-
 
 .comment__list {
   @include bodycopyMobile;
@@ -169,40 +163,31 @@ body{
 .comment-contain img {
   height: 2.25rem;
   width: 2.25rem;
- 
-  border-radius: 50%;
- 
-}
 
+  border-radius: 50%;
+}
 
 ::placeholder {
   color: #000000;
 }
 
 
-
-textarea {
-  margin: 3rem 3.125rem;
-  width: 80vw;
-  height: 7vh;
-  border: 0.0625rem solid $mercury;
-  
+.text{
+  margin-left: 5rem;
+  width: 70vw;
+  height: 10vh;
 }
-
-
 
 button {
   border: none;
   font-size: 1.5rem;
   font-weight: 700;
-  border-radius: .375rem;
-  width:70vw;
+  border-radius: 0.375rem;
+  width: 70vw;
   color: #ffff;
   background-color: $brainflixBlue;
   height: 3.5rem;
-  margin: 0.625rem;
-
-    
+  margin-left: 6.25rem;
 }
 
 //primary CTA hover
@@ -213,7 +198,6 @@ button:hover {
 .divider {
   border-top: 0.0625rem solid $mercury;
   margin-bottom: -0.625rem;
-
 }
 
 .comment {
@@ -222,7 +206,6 @@ button:hover {
 
   display: flex;
   flex-direction: column;
-  
 
   &-section {
     display: flex;
@@ -235,208 +218,190 @@ button:hover {
   }
   &__name {
     list-style: none;
-    margin-left: 10px;
-  
+    margin-left: .625rem;
   }
   &__item {
-    margin-left: 0.625rem;
+    margin-left: 50px;
   }
   &-container {
     margin: 1.25rem 0.625rem;
-   
-  &__deleteBtn-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 3.125rem;
-  
   }
-  &__deleteBtn {
-    font-size: 1rem;
+    &__deleteBtn-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 3.125rem;
+    }
+    &__deleteBtn {
+      font-size: 1rem;
+    }
+    &__avatar {
+      margin-left: 10px;
+      border-radius: 1.5625rem;
+      height: 3.125rem;
+      width: 3.125rem;
+      background-image: url("./assets/Images/Mohan-muruge.jpg");
+      background-size: cover;
+    }
+}
 
+  .divide {
+    margin-top: 1.875rem;
+    border: 1px solid $mercury;
   }
-}
 
-.divide{
-  margin-top: 1.875rem;
-  border:1px solid $mercury ;
-}
-
-
-
-label {
-  display: block;
-  margin: 0.0625rem;
-  padding: 0.0625rem;
-}
-
-
-.next{
-  &__videos-heading{
-    color: $silver;
+  label {
+    display: block;
+    margin: 0.0625rem;
+    padding: 0.0625rem;
   }
-}
 
-}
+  .next {
+    &__videos-heading {
+      color: $silver;
+    }
+  }
+
 //Footer section
 // @include footer;
 
-
 /* tablet*/
 
-
-
-.header{
-  @include tablet{
+.header {
+  @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-  &__logo-image{
-    width: 7.5rem;
-    height: 3.125rem;
+    &__logo-image {
+      width: 7.5rem;
+      height: 3.125rem;
+    }
   }
-  
-  }
- 
 }
 
-.search{
-  @include tablet{
+.search {
+  @include tablet {
     display: flex;
-    &__input{
-      border-radius: .375rem;
+    &__input {
+      border-radius: 0.375rem;
       padding: 0 1.875rem;
       width: 50vw;
-    } 
+    }
   }
 
-&__avatar{
-  @include tablet{
-    display: none;
-    
+  &__avatar {
+    @include tablet {
+      display: none;
+    }
   }
-
-}
 }
 
-.upload{
-  @include tablet{
-    &__button{
+.upload {
+  @include tablet {
+    &__button {
       width: 15vw;
-      border-radius: .375rem;
+      border-radius: 0.375rem;
       border: none;
     }
   }
-&__tablet-avatar{
-  display: none;
-  @include tablet{
-  display: block;
-  border-radius: 1.5625rem;
-  height: 3.125rem;
-  width: 3.125rem;  
-  background-image: url("./assets/Images/Mohan-muruge.jpg");
-  background-size: cover;
+  &__tablet-avatar {
+    display: none;
+    @include tablet {
+      display: block;
+      border-radius: 1.5625rem;
+      height: 3.125rem;
+      width: 3.125rem;
+      background-image: url("./assets/Images/Mohan-muruge.jpg");
+      background-size: cover;
+    }
   }
 }
-}
 
-
-.hero{
-  &__title-container{
+.hero {
+  &__title-container {
     @include sectionheaderMobile;
     margin: 1.875rem 1.25rem;
   }
-  &__video{
+  &__video {
     width: 100vw;
   }
 }
 
-
-.statistics{
-  &__paragraph{
+.statistics {
+  &__paragraph {
     @include subheaderMobile;
     margin-left: 1.25rem;
   }
-  &__icons{
+  &__icons {
     width: 30px;
     display: flex;
     flex-direction: column;
   }
 }
 
-.about{
-  &__paragraph{
+.about {
+  &__paragraph {
     @include bodycopyMobile;
     margin: 1.25rem 1.25rem;
   }
 }
 
-
-
 /* conversation section */
 
 .conversation {
-  @include tablet{
+  @include tablet {
+    &__form {
+      display: flex;
+    }
 
-  &__form  {
-  display: flex;
-  
+    &__label-heading {
+      display: flex;
+      color: $silver;
+    }
+
+    &__avatar {
+      height: 2.25rem;
+      width: 2.25rem;
+      background-size: cover;
+      border-radius: 50%;
+      background-image: url("./assets/Images/Mohan-muruge.jpg");
+      position: relative;
+      bottom: -4.375rem;
+      right: -0.625rem;
+    }
+    &__comment {
+      margin: 0.625rem 0.625rem;
+    }
+
+    &__comment-container {
+      margin-left: 0.625rem;
+      width: 170%;
+    }
+    &__label-name {
+      position: relative;
+      top: -1.875rem;
+      right: -3.125rem;
+    }
+    &__label-comment {
+      position: relative;
+      top: 1.5rem;
+      right: -3.75rem;
+    }
+    &__input-border-red {
+      border: 1px solid #d22d2d;
+    }
+
+    &__avatar-img {
+      position: relative;
+      right: 2.5rem;
+      top: 3.75rem;
+    }
+    &__btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem;
+    }
   }
-
-&__label-heading{
-  display: flex;
-  color: $silver;
-}
-
-  &__avatar {
-    height: 2.25rem;
-    width: 2.25rem;
-    background-size: cover;
-    border-radius: 50%;
-    background-image: url("./assets/Images/Mohan-muruge.jpg");
-    position: relative;
-    bottom: -4.375rem;
-    right: -0.625rem;
-    
-  }
-  &__comment{
-    margin: .625rem .625rem;
-  }
-
-&__comment-container{
-  margin-left: .625rem;
-  width: 170%;
-
-}
-  &__label-name{
-    position: relative;
-    top: -1.875rem;
-    right: -3.125rem;
-  }
-  &__label-comment{
-    position: relative;
-    top: 1.5rem;
-    right: -3.75rem;
-   
-}
-&__input-border-red{
-  border: 1px solid #D22D2D;
-}
-
-
-&__avatar-img {
-  position: relative;
-  right: 2.5rem;
-  top: 3.75rem;
- 
-}
-&__btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-
-}
-}
 }
 
 .comment__list {
@@ -448,9 +413,7 @@ label {
   width: 2.25rem;
   background-color: $mercury;
   border-radius: 50%;
- 
 }
-
 
 ::placeholder {
   color: #000000;
@@ -469,36 +432,27 @@ input {
   &:focus {
     outline: none;
   }
-
-
 }
-
 
 textarea {
   margin: 3rem 3.125rem;
   width: 80vw;
   height: 7vh;
   border: 0.0625rem solid $mercury;
-  
 }
 
-
-
 button {
-  @include tablet{
+  @include tablet {
     border: none;
     font-size: 1.5rem;
     font-weight: 700;
-    border-radius: .375rem;
-    width:40vw;
+    border-radius: 0.375rem;
+    width: 40vw;
     color: #ffff;
     background-color: $brainflixBlue;
     height: 3.5rem;
     margin: 0.625rem;
-  
   }
- 
-    
 }
 
 //primary CTA hover
@@ -509,7 +463,6 @@ button:hover {
 .divider {
   border-top: 0.0625rem solid $mercury;
   margin-bottom: -0.625rem;
-
 }
 
 .comment {
@@ -518,59 +471,46 @@ button:hover {
   display: flex;
   flex-direction: column;
 
-  &__section{
-   @include tablet{
-  
-   }
+  &__section {
+    @include tablet {
+    }
   }
-  &__text-area{
-    @include tablet{
-      
+  &__text-area {
+    @include tablet {
     }
   }
 
-
-  &__date{
+  &__date {
     display: flex;
-  justify-content: flex-end;
-  color: $silver;
+    justify-content: flex-end;
+    color: $silver;
   }
-  &__name{
+  &__name {
     position: relative;
     bottom: 1.5rem;
     left: 0.625rem;
-   
-}
-&__item{
-  margin-top: -1.875rem;
-  margin-left: 0.625re
-}
-&-container{
-  margin: 1.25rem .625rem;
-
-}
-&__deleteBtn-container{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 3.125rem;
-
-}
-&__deleteBtn{
-
-  font-size: 1rem;
- 
-
+  }
+  &__item {
+    margin-top: -1.875rem;
+    margin-left: 0.625re;
+  }
+  &-container {
+    margin: 1.25rem 0.625rem;
+  }
+  &__deleteBtn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3.125rem;
+  }
+  &__deleteBtn {
+    font-size: 1rem;
+  }
 }
 
-
-}
-
-.divide{
+.divide {
   margin-top: 1.875rem;
-  border:1px solid $mercury ;
+  border: 1px solid $mercury;
 }
-
-
 
 label {
   display: block;
@@ -578,24 +518,21 @@ label {
   padding: 0.0625rem;
 }
 
-
-.next{
+.next {
   margin-left: 1.25rem;
-  &__videos{
+  &__videos {
     display: flex;
- 
   }
-  &__videos-heading{
+  &__videos-heading {
     margin-left: 1.25rem;
-    color: $silver; 
+    color: $silver;
   }
 }
 
-
-.next img{
-  border-radius: .375rem;
-  width: 40vw
+.next img {
+  border-radius: 0.375rem;
+  width: 40vw;
 }
-.next li{
+.next li {
   list-style: none;
 }

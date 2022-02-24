@@ -1,4 +1,4 @@
-const Comments = (props) => {
+const Comments = ({name, date, comment}) => {
   return (
     <section className="comment">
         
@@ -7,16 +7,16 @@ const Comments = (props) => {
 
         <ul className="comment__item">
         
-          <li className="comment__date">{props.date}</li>
+          <li className="comment__date">{date}</li>
           <li className="comment__name">
-            <span>{props.name}</span>
+            <span>{name}</span>
           </li>
           <li className="conversation__comment">
             <span></span>
-            {props.comment}
+            {comment}
           </li>
         </ul>
-        <hr></hr>
+        <hr className="divider"></hr>
       </div>
       <div ></div>
     </section>

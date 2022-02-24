@@ -1,22 +1,19 @@
 import React from "react";
-
+import { v4 as uuidv4 } from "uuid";
 import "./App.scss";
 import "./assets/Font/AvenirNextLTPro-Bold.otf";
 import Header from "./components/header";
 import Hero from "./components/hero";
-import videosArray from "./Data/videos.json";
 import videoDetails from "./Data/video-details.json";
 import About from "./components/about";
 import Comments from "./components/comments";
 import Conversation from "./components/conversation";
 import Video from "./components/nextVideo";
 
-const videoArray = videosArray.map((video) => video);
-console.log(videoArray);
+// video objects
+const videoNextArray = videoDetails.map((video) => video);
 
-const videoDetailsArray = videoDetails.map((video) => video);
-console.log(videoDetailsArray[0].title);
-
+// comments
 const comments = [
   {
     Name: "Michael Lyons",
@@ -38,73 +35,68 @@ const comments = [
   },
 ];
 
-const result = comments.map((comment) => comment);
-console.log(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
 class App extends React.Component {
+  // managing state
   state = {
-    currenttitle: videoDetailsArray[0].title,
-    currentVideo: videoDetailsArray[0].video,
-    currentVideoImage: videoDetailsArray[0].image,
-    currentVideoObject: videoDetailsArray[0],
-    allVideos: videoDetailsArray
+    currentVideoObject: videoNextArray[0],
+    allVideos: videoNextArray,
   };
 
-  handleClick=(videoid)=>{
-const foundVideo = this.state.allVideos.find(video => video.id === videoid)
-this.setState({currentVideoObject:foundVideo})
-console.log(foundVideo)
-  }
+  //function to change state based on id and title
+  handleClick = (videoId) => {
+    const { allVideos } = this.state;
+    const foundVideo = allVideos.find((video) => video.id === videoId);
+    this.setState({ currentVideoObject: foundVideo });
+  };
 
   render() {
+    const { currentVideo, currentVideoImage, currentVideoObject } = this.state;
+
+    //mapping over comments 
+    const allComments = comments.map((comment) => {
+      return (
+        <Comments
+          key={uuidv4()}
+          name={comment.Name}
+          date={comment.Date}
+          comment={comment.Comment}
+        />
+      );
+    });
+
+  //filter video by id and map over to render the returned array of videos    
+    const videos = videoNextArray
+      .filter((video) => video.id !== currentVideoObject.id)
+      .map((video) => {
+        return (
+          <Video
+            key={uuidv4()}
+            id={video.id}
+            title={video.title}
+            channel={video.channel}
+            image={video.image}
+            func={this.handleClick}
+          />
+        );
+      });
+
     return (
       <div className="App">
         <div className="wrapper">
           <Header />
 
-          <Hero video={this.state.currentVideo} image={this.state.currentVideoImage} current={this.state.currentVideoObject}/>
+          <Hero
+            video={currentVideo}
+            image={currentVideoImage}
+            current={currentVideoObject}
+          />
 
           <About />
 
           <Conversation />
-
-          {comments.map((comment) => {
-            return (
-              <Comments
-                name={comment.Name}
-                date={comment.Date}
-                comment={comment.Comment}
-              />
-            );
-          })}
-          
+          {allComments}
           <h3 className="next__videos-heading">NEXT VIDEOS</h3>
-          {videoArray.filter(video=> video.id !== this.state.currentVideoObject.id).map((video) => {
-            return (
-              video.title !== this.currenttitle && (
-                <Video
-                id={video.id}
-                  title={video.title}
-                  channel={video.channel}
-                  image={video.image}
-                  func={this.handleClick}
-
-                />
-              )
-            );
-          })}
+          {videos}
         </div>
       </div>
     );
