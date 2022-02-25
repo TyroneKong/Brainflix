@@ -1,3 +1,6 @@
+import commentIcon from "../assets/Icons/add_comment.svg"
+
+
 
 const Conversation=({countComments})=>{
     return (
@@ -18,7 +21,7 @@ const Conversation=({countComments})=>{
       
         <textarea
           id="comment"
-          className="text"
+          className="conversation__text"
           name="text"
           placeholder="Add a new comment"
           required
@@ -27,6 +30,7 @@ const Conversation=({countComments})=>{
     </div>
     `
     <div className="conversation__btn">
+        <img className="comment__icon" src={commentIcon}></img>
       <button className="comment__btn">COMMENT</button>
     </div>
     `
