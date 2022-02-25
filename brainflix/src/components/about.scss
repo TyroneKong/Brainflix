@@ -1,0 +1,9 @@
+@use "../styles/partials/mixin" as *;
+@use "../styles/partials/variables" as *;
+
+.about {
+    &__paragraph {
+      @include bodycopyMobile;
+      margin: 1.25rem 1.25rem;
+    }
+  }

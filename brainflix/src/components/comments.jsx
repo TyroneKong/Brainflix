@@ -1,3 +1,5 @@
+import "./comments.scss"
+
 const Comments = ({ name, date, comment }) => {
   return (
     <section className="comment">

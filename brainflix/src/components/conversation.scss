@@ -1,0 +1,74 @@
+@use "../styles/partials/mixin" as *;
+@use "../styles/partials/variables" as *;
+
+
+.conversation {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+  
+    &__form * {
+      box-sizing: border-box;
+    }
+  
+    &__label-heading {
+      display: flex;
+      color: $silver;
+    }
+  
+    &__avatar {
+      border-radius: 1.5625rem;
+      height: 3.125rem;
+      width: 3.125rem;
+      background-image: url("../assets/Images/Mohan-muruge.jpg");
+      background-size: cover;
+      position: relative;
+      bottom: -3.375rem;
+      right: -0.625rem;
+    }
+    &__comment {
+      list-style: none;
+      margin: 0.625rem 1.25rem;
+    }
+    &__commentCount {
+      margin-left: 0.625rem;
+      font-weight: bold;
+    }
+  
+    &__comment-container {
+      margin-left: 0.625rem;
+      width: 170%;
+    }
+    &__label-name {
+      position: relative;
+      top: -1.875rem;
+      right: -3.125rem;
+    }
+    &__label-comment {
+      position: relative;
+      top: -5px;
+      right: -4.75rem;
+    }
+    &__input-border-red {
+      border: 1px solid #d22d2d;
+    }
+  
+    &__avatar-img {
+      position: relative;
+      right: 2.5rem;
+      top: 3.75rem;
+    }
+    &__btn {
+      margin-left: -4.375rem;
+      padding: 0 2rem;
+      @include desktop {
+      }
+    }
+    &__text {
+      border: 2px solid $mercury;
+      margin-left: 5rem;
+      width: 70vw;
+      height: 10vh;
+    }
+  }

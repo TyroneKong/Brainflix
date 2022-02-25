@@ -1,0 +1,86 @@
+@use "../styles/partials/mixin" as *;
+@use "../styles/partials/variables" as *;
+
+.comment__list {
+    @include bodycopyMobile;
+    margin-left: 3.125rem;
+    margin-bottom: 1.25rem;
+    list-style: none;
+  }
+  
+  .comment-contain img {
+    height: 2.25rem;
+    width: 2.25rem;
+  
+    border-radius: 50%;
+  }
+  
+  ::placeholder {
+    color: #000000;
+  }
+  
+  button {
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    width: 70vw;
+    color: #ffff;
+    background-color: $brainflixBlue;
+    height: 3.5rem;
+    margin-left: 6.25rem;
+  }
+  
+  //primary CTA hover
+  button:hover {
+    background-color: #000000;
+  }
+  
+  .divider {
+    border-top: 0.0625rem solid $mercury;
+    margin-bottom: -0.625rem;
+  }
+  
+  .comment {
+    margin-top: 1.25rem;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  
+    &-section {
+      display: flex;
+      flex-direction: column;
+    }
+    &__date {
+      margin-top: -10px;
+      display: flex;
+      justify-content: flex-end;
+      color: $silver;
+    }
+    &__name {
+      font-weight: bold;
+      margin-top: -3.25rem;
+      list-style: none;
+      margin-left: 1.25rem;
+    }
+    &__item {
+      margin: 1rem 3.125rem;
+    }
+    &-container {
+      margin: 0 0.625rem;
+    }
+ 
+    &__avatar {
+      margin-left: 0.625rem;
+      border-radius: 1.5625rem;
+      height: 3.125rem;
+      width: 3.125rem;
+      background-image: url("../assets/Images/Mohan-muruge.jpg");
+      background-size: cover;
+    }
+    &__icon {
+      position: relative;
+      left: 150px;
+    }
+  }

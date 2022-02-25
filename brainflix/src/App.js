@@ -1,4 +1,4 @@
-import React from "react";
+import {Component} from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./App.scss";
 import "./assets/Font/AvenirNextLTPro-Bold.otf";
@@ -35,7 +35,7 @@ const comments = [
   },
 ];
 
-class App extends React.Component {
+class App extends Component {
   // managing state
   state = {
     currentVideoObject: videoNextArray[0],

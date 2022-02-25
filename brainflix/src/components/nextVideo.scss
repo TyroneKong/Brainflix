@@ -1,0 +1,50 @@
+@use "../styles/partials/mixin" as *;
+@use "../styles/partials/variables" as *;
+
+.next {
+    margin-left: 1.25rem;
+    &__image {
+      margin-top: 10px;
+      border-radius: 0.375rem;
+      width: 12.5rem;
+      height: 7.5rem;
+    }
+    li {
+      list-style: none;
+    }
+  
+    &__videos-heading {
+      margin: 1.875rem 1.25rem;
+      color: $silver;
+    }
+    &__title {
+      font-weight: bold;
+    }
+    &__card {
+        display: flex;
+        
+    
+  }
+}
+
+  .desktop__wrapper {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  .next__video-main {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+      max-width: 100%;
+      margin-top: 120px;
+    }
+  }
+  .main {
+    @include desktop {
+        
+      margin-top: 400px;
+    }
+  }

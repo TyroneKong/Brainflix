@@ -1,4 +1,4 @@
-
+import "./about.scss"
 
 const About=()=>{
     return (

@@ -1,5 +1,7 @@
 import viewIcon from "../assets/Icons/views.svg";
 import likes from "../assets/Icons/likes.svg";
+import "./hero.scss"
+
 
 const Hero = ({ current }) => {
   const timestamp = current.timestamp;

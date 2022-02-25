@@ -1,3 +1,6 @@
+import "./nextVideo.scss"
+
+
 const Video = ({func, title, channel, image, id}) => {
   return (
     <section className="next">

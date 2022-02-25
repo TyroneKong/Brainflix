@@ -1,7 +1,7 @@
 import brainflixLogo from "../assets/Logo/BrainFlix-logo.svg";
 import uploadSVG from "../assets/Icons/upload.svg"
 import searchIcon from "../assets/Icons/search.svg"
-
+import "./header.scss"
 
 const Header=(props)=>{
 
@@ -20,11 +20,11 @@ const Header=(props)=>{
         </div>
      
         <div className="upload">
-        <img className="upload__icon"  src={uploadSVG}></img>
-          <button className="upload__button">   UPLOAD</button>
+       
+          <button className="upload__button">  <img className="upload__icon"  src={uploadSVG}></img> UPLOAD</button>
         
         <div className="upload__tablet-avatar">
-        </div>
+      </div>
         </div>
       </header>
     )
