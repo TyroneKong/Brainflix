@@ -20,11 +20,11 @@ const Header=(props)=>{
         </div>
      
         <div className="upload">
-       
-          <button className="upload__button">  <img className="upload__icon"  src={uploadSVG}></img> UPLOAD</button>
-        </div>
+        <img className="upload__icon"  src={uploadSVG}></img>
+          <button className="upload__button">   UPLOAD</button>
+        
         <div className="upload__tablet-avatar">
-
+        </div>
         </div>
       </header>
     )

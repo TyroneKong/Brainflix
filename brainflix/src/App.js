@@ -52,7 +52,7 @@ class App extends React.Component {
   render() {
     const { currentVideo, currentVideoImage, currentVideoObject } = this.state;
 
-    //mapping over comments 
+    //mapping over comments
     const allComments = comments.map((comment) => {
       return (
         <Comments
@@ -64,9 +64,9 @@ class App extends React.Component {
       );
     });
 
-   const numberofComments = allComments.length
+    const numberofComments = allComments.length;
 
-  //filter video by id and map over to render the returned array of videos    
+    //filter video by id and map over to render the returned array of videos
     const videos = videoNextArray
       .filter((video) => video.id !== currentVideoObject.id)
       .map((video) => {
@@ -91,15 +91,22 @@ class App extends React.Component {
             video={currentVideo}
             image={currentVideoImage}
             current={currentVideoObject}
-           
           />
+          <div className="desktop__wrapper">
+          <div className="main">
+            <About />
 
-          <About />
+            <Conversation countComments={numberofComments} />
+            {allComments}
+          </div>
+          <div className="next__video-main">
+            <h3 className="next__videos-heading">NEXT VIDEOS</h3>
+            {videos}
+          </div>
 
-          <Conversation countComments={numberofComments}/>
-          {allComments}
-          <h3 className="next__videos-heading">NEXT VIDEOS</h3>
-          {videos}
+
+          </div>
+          
         </div>
       </div>
     );

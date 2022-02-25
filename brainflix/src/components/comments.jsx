@@ -24,3 +24,5 @@ const Comments = ({ name, date, comment }) => {
 };
 
 export default Comments;
+
+
