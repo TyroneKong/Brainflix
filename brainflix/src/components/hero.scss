@@ -2,65 +2,63 @@
 @use "../styles/partials/variables" as *;
 
 .hero {
-    &__container {
-        margin-top: 1.25rem;
-        background-color: black;
-      display: flex;
-      justify-content: center;
-    }
-    &__title-container {
-      @include sectionheaderMobile;
-      margin: 1.875rem 1.25rem;
-    }
-    &__video {
-     
-      height: auto;
-      max-width: 100%;
-      margin-top: 1.0625rem;
-      object-fit: cover;
-    }
+  &__container {
+    margin-top: 1.25rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
   }
-  
-  .statistics {
+  &__title-container {
+    @include sectionheaderMobile;
+    margin: 1.875rem 1.25rem;
+  }
+  &__video {
+    height: auto;
+    max-width: 100%;
+    margin-top: 1.0625rem;
+    object-fit: cover;
+  }
+}
+
+.statistics {
+  @include desktop {
+  }
+  &__paragraph {
+    @include subheaderMobile;
+    margin: 20px 1.25rem;
+  }
+  &__icons {
+    margin-top: -1.125rem;
+    margin-left: 18.25rem;
     @include desktop {
-    }
-    &__paragraph {
-      @include subheaderMobile;
-      margin: 20px 1.25rem;
-    }
-    &__icons {
-      margin-top: -3.125rem;
-      margin-left: 18.25rem;
-      @include desktop {
-        display: flex;
-      }
-    }
-    &__date {
-      color: $silver;
-      margin-bottom: 0.625rem;
-      margin-left: 1.25rem;
-    }
-    &__views {
-      margin-bottom: 1.25rem;
-    }
-    &__likesNumber {
-      margin-left: 0.625rem;
-      color: $silver;
-    }
-    &__viewsNumber {
-      margin-left: 0.625rem;
-      color: $silver;
-    }
-    &__views-info {
       display: flex;
-    }
-    &__likes-info {
-      display: flex;
-    }
-    &__info {
-      @include desktop {
-        display: flex;
-      }
     }
   }
-  
+  &__date {
+    color: $silver;
+    margin-bottom: 0.625rem;
+    margin-left: 1.25rem;
+  }
+  &__views {
+    margin-bottom: 1.25rem;
+  }
+  &__likesNumber {
+    margin-left: 0.625rem;
+    color: $silver;
+  }
+  &__viewsNumber {
+    margin-left: 0.625rem;
+    color: $silver;
+  }
+  &__views-info {
+    display: flex;
+  }
+  &__likes-info {
+    display: flex;
+  }
+  &__info {
+    @include desktop {
+      display: flex;
+    }
+  }
+}

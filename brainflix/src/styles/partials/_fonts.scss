@@ -1,11 +1,11 @@
 
 /*font face rules
 */
-// @font-face {
-//     font-family: "AvenirNextLTPro";
-//     src: url("./assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-    
-//   }
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+    font-weight: 700;
+  }
   
 //   @font-face {
 //     font-family: "AvenirNextLTPro";
@@ -13,18 +13,18 @@
     
 //   }
   
-//   @font-face {
-//     font-family: "AvenirNextLTPro";
-//     src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
-    
-//   }
+  @font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+    font-weight: 400;
+  }
   
   
-//   @font-face {
-//     font-family: "AvenirNextLTPro";
-//     src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  @font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../../assets/Font/Alternative_files/AvenirNextLTPro-Bold.woff") format("woff");
     
-//   }
+  }
   
 //   @font-face {
 //     font-family: "AvenirNextLTPro";

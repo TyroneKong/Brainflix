@@ -11,7 +11,7 @@ import Conversation from "./components/conversation";
 import Video from "./components/nextVideo";
 
 // video objects
-const videoNextArray = videoDetails.map((video) => video);
+const videoArray = videoDetails.map((video) => video);
 
 // comments
 const comments = [
@@ -38,11 +38,11 @@ const comments = [
 class App extends Component {
   // managing state
   state = {
-    currentVideoObject: videoNextArray[0],
-    allVideos: videoNextArray,
+    currentVideoObject: videoArray[0],
+    allVideos: videoArray,
   };
 
-  //function to change state based on id and title
+  //function to change state based on id
   handleClick = (videoId) => {
     const { allVideos } = this.state;
     const foundVideo = allVideos.find((video) => video.id === videoId);
@@ -67,7 +67,7 @@ class App extends Component {
     const numberofComments = allComments.length;
 
     //filter video by id and map over to render the returned array of videos
-    const videos = videoNextArray
+    const videos = videoArray
       .filter((video) => video.id !== currentVideoObject.id)
       .map((video) => {
         return (

@@ -2,6 +2,7 @@
 @use "./styles/partials/mixin" as *;
 @use "./styles/partials/variables" as *;
 
+
 /* reset */
 * {
   margin: 0;
@@ -178,19 +179,6 @@ body {
 //   }
 // }
 
-.desktop__wrapper {
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.next__video-main {
-  @include desktop {
-    max-width: 100%;
-    margin-top: 120px;
-  }
-}
 
 
 // .about {
@@ -200,11 +188,7 @@ body {
 //   }
 // }
 
-.main {
-  @include desktop {
-    margin-top: 400px;
-  }
-}
+
 
 // /* conversation section */
 
