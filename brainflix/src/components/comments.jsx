@@ -2,12 +2,15 @@ const Comments = ({ name, date, comment }) => {
   return (
     <section className="comment">
       <div className="comment-container">
-        <p className="comment__date">{date}</p>
-        <div className="comment__avatar"></div>
+       
+        <div className="comment__avatar">
+          
+        </div>
 
         <ul className="comment__item">
           <li className="comment__name">
-            <span>{name}</span>
+            <p><span>{name}</span></p>
+            <p className="comment__date">{date}</p>
           </li>
           <li className="conversation__comment">
             {comment}

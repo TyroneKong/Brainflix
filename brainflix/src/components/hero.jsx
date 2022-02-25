@@ -3,6 +3,12 @@ import likes from "../assets/Icons/likes.svg"
 
 
 const Hero=({current})=>{
+  const timestamp = current.timestamp
+  const date = new Date(timestamp)
+  
+  const formattedDate = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear()
+
+
 return (
     <>
     <section className="hero">
@@ -18,11 +24,16 @@ return (
     <hr className="divide"></hr>
     <section className="statistics">
     <p className="statistics__paragraph">By Red Crow</p>
-    <p className="statistic__date"></p>
+    <p className="statistics__date">{formattedDate}</p>
     <div className="statistics__icons">
+    <div className="statistics__views-info">
     <img src={viewIcon} className="statistics__views"></img>
+    <p className="statistics__viewsNumber">{current.views}</p>
+    </div>
+    <div className="statistics__likes-info">
     <img src={likes}    className="statistics__likes"></img>
-        
+    <p className="statistics__likesNumber">{current.likes}</p>
+    </div>
     </div>
   
     </section>

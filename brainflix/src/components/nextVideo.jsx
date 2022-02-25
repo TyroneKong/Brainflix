@@ -7,6 +7,7 @@ const Video = ({func, title, channel, image, id}) => {
           func(id);
         }}
       >
+        <div className="next__card">
         <ul>
           <li className="next__title"><span>{title}</span></li>
           <li className="next__channel">{channel}</li>
@@ -14,6 +15,8 @@ const Video = ({func, title, channel, image, id}) => {
             <img className="next__image" src={image}></img>
           </li>
         </ul>
+        </div>
+      
       </div>
     </section>
   );
