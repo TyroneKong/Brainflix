@@ -64,6 +64,8 @@ class App extends React.Component {
       );
     });
 
+   const numberofComments = allComments.length
+
   //filter video by id and map over to render the returned array of videos    
     const videos = videoNextArray
       .filter((video) => video.id !== currentVideoObject.id)
@@ -89,11 +91,12 @@ class App extends React.Component {
             video={currentVideo}
             image={currentVideoImage}
             current={currentVideoObject}
+           
           />
 
           <About />
 
-          <Conversation />
+          <Conversation countComments={numberofComments}/>
           {allComments}
           <h3 className="next__videos-heading">NEXT VIDEOS</h3>
           {videos}

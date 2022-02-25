@@ -8,8 +8,8 @@ const Video = ({func, title, channel, image, id}) => {
         }}
       >
         <ul>
-          <li>{title}</li>
-          <li>{channel}</li>
+          <li className="next__title"><span>{title}</span></li>
+          <li className="next__channel">{channel}</li>
           <li>
             <img className="next__image" src={image}></img>
           </li>

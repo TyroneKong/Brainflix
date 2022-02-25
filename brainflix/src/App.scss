@@ -121,6 +121,9 @@ body {
     list-style: none;
     margin: 0.625rem 1.25rem;
   }
+  &__commentCount{
+    font-weight: bold;
+  }
 
   &__comment-container {
     margin-left: 0.625rem;
@@ -217,6 +220,8 @@ button:hover {
     color: $silver;
   }
   &__name {
+    font-weight: bold;
+    margin-top: -20px;
     list-style: none;
     margin-left: .625rem;
   }
@@ -256,8 +261,14 @@ button:hover {
   }
 
   .next {
+    &__videos{
+      max-height: 20vh;
+    }
     &__videos-heading {
       color: $silver;
+    }
+    &__title{
+      font-weight: bold;
     }
   }
 
@@ -359,14 +370,7 @@ button:hover {
     }
 
     &__avatar {
-      height: 2.25rem;
-      width: 2.25rem;
-      background-size: cover;
-      border-radius: 50%;
-      background-image: url("./assets/Images/Mohan-muruge.jpg");
-      position: relative;
-      bottom: -4.375rem;
-      right: -0.625rem;
+    
     }
     &__comment {
       margin: 0.625rem 0.625rem;
