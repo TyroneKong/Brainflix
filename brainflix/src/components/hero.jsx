@@ -1,7 +1,6 @@
 import viewIcon from "../assets/Icons/views.svg";
 import likes from "../assets/Icons/likes.svg";
-import "./hero.scss"
-
+import "./hero.scss";
 
 const Hero = ({ current }) => {
   const timestamp = current.timestamp;
@@ -27,23 +26,18 @@ const Hero = ({ current }) => {
         <div className="hero__title-container">
           <h1 className="hero__title-heading">{current.title}</h1>
         </div>
-      
-      <hr className="hero__divide"></hr>
-    
+
+        <hr className="hero__divide"></hr>
+
         <div className="hero__statistics">
+          <div className="hero__statistics-paragraph">
+            <p>By Red Crow</p>
+          </div>
 
-
-        <div className="hero__statistics-paragraph">
-          <p >By Red Crow</p>
-         
+          <div className="hero__statistics-date">
+            <p>{formattedDate}</p>
+          </div>
         </div>
-
-        <div className="hero__statistics-date">
-        <p >{formattedDate}</p>
-
-        </div>
-        </div>
-
 
         <div className="hero__statistics-icons">
           <div className="hero__statistics-views-info">
@@ -54,10 +48,8 @@ const Hero = ({ current }) => {
             <img src={likes} className="hero__statistics-likes"></img>
             <p className="hero__statistics-likesNumber">{current.likes}</p>
           </div>
-        </div> 
-       
-       </section>
-      
+        </div>
+      </section>
     </>
   );
 };

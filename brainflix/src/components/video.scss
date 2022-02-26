@@ -2,13 +2,16 @@
 @use "../styles/partials/variables" as *;
 
 .next {
+  @include tablet{
+    @include subheaderDesktopTablet;
+  }
   @include desktop {
       margin-left: -1.25rem;
-    width: 700px;
+    width: 43.75rem;
   }
   margin-left: 1.25rem;
   &__image {
-    margin-top: 10px;
+    margin-top: .625rem;
     border-radius: 0.375rem;
     width: 12.5rem;
     height: 7.5rem;

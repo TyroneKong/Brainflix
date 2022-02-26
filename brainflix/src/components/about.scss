@@ -4,6 +4,10 @@
 .about {
     &__paragraph {
       margin: 1.25rem 1.25rem;
+      @include tablet{
+          padding-bottom: 80px;
+          @include subheaderDesktopTablet
+      }
     }
     &__divider{
         margin-top: -70px;

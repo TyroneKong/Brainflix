@@ -30,7 +30,9 @@
     height: 3.5rem;
     margin-left: 6.25rem;
     @include tablet{
-        width: 30vw;
+        margin-left: 2rem;
+        width: 25vw;
+        height: 4rem;
     }
     @include desktop{
         width: 20vw;
@@ -59,7 +61,7 @@
       flex-direction: column;
     }
     &__date {
-      margin-top: -10px;
+      margin-top: -0.625rem;
       display: flex;
       justify-content: flex-end;
       color: $silver;
@@ -74,7 +76,9 @@
         list-style: none;
       margin: 1rem 3.125rem;
       @include tablet{
-          margin-top: 100px;
+          @include subheaderDesktopTablet;
+          margin-top: .625rem;
+          margin-left: 4.375rem;
       }
     }
     &-container {
@@ -88,9 +92,19 @@
       width: 3.125rem;
       background-image: url("../assets/Images/Mohan-muruge.jpg");
       background-size: cover;
+      @include tablet{
+        border-radius: 2.1875rem;
+        height: 4.125rem;
+        width: 4.125rem;
+      }
     }
     &__icon {
       position: relative;
-      left: 150px;
+      left: 9.375rem;
+      @include tablet{
+          position: relative;
+          left: 5rem;
+          top: .3125rem;
+      }
     }
   }
