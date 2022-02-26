@@ -3,7 +3,9 @@
 
 .about {
     &__paragraph {
-      @include bodycopyMobile;
       margin: 1.25rem 1.25rem;
+    }
+    &__divider{
+        margin-top: -70px;
     }
   }

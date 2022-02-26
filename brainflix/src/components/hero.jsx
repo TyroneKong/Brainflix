@@ -25,27 +25,39 @@ const Hero = ({ current }) => {
           </video>
         </div>
         <div className="hero__title-container">
-          <h2 className="hero__title-heading">{current.title}</h2>
+          <h1 className="hero__title-heading">{current.title}</h1>
         </div>
-      </section>
-      <hr className="divide"></hr>
-      <section className="statistics">
-        <div className="statistics__info">
-          <p className="statistics__paragraph">By Red Crow</p>
-          <p className="statistics__date">{formattedDate}</p>
+      
+      <hr className="hero__divide"></hr>
+    
+        <div className="hero__statistics">
+
+
+        <div className="hero__statistics-paragraph">
+          <p >By Red Crow</p>
+         
         </div>
 
-        <div className="statistics__icons">
-          <div className="statistics__views-info">
-            <img src={viewIcon} className="statistics__views"></img>
-            <p className="statistics__viewsNumber">{current.views}</p>
-          </div>
-          <div className="statistics__likes-info">
-            <img src={likes} className="statistics__likes"></img>
-            <p className="statistics__likesNumber">{current.likes}</p>
-          </div>
+        <div className="hero__statistics-date">
+        <p >{formattedDate}</p>
+
         </div>
-      </section>
+        </div>
+
+
+        <div className="hero__statistics-icons">
+          <div className="hero__statistics-views-info">
+            <img src={viewIcon} className="hero__statistics-views"></img>
+            <p className="hero__statistics-viewsNumber">{current.views}</p>
+          </div>
+          <div className="hero__statistics-likes-info">
+            <img src={likes} className="hero__statistics-likes"></img>
+            <p className="hero__statistics-likesNumber">{current.likes}</p>
+          </div>
+        </div> 
+       
+       </section>
+      
     </>
   );
 };

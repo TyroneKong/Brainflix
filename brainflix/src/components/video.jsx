@@ -1,4 +1,4 @@
-import "./nextVideo.scss";
+import "./video.scss";
 
 const Video = ({ func, title, channel, image, id }) => {
   return (

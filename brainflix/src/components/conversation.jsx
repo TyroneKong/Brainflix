@@ -26,13 +26,13 @@ const Conversation = ({ countComments }) => {
               placeholder="Add a new comment"
               required
             ></textarea>
-          </div>
+          
           `
           <div className="conversation__btn">
             <img className="comment__icon" src={commentIcon}></img>
             <button className="comment__btn">COMMENT</button>
           </div>
-          `
+          `</div>
         </div>
       </form>
       <hr className="divide" />

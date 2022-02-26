@@ -4,7 +4,7 @@ const About=()=>{
     return (
 
 <article className="about">
-    <hr className="divider"></hr>
+    <hr className="about__divider"></hr>
 <div className="about__paragraph-container">
   <p className="about__paragraph">
     On a gusty day in Southern Utah, a group of 25 daring mountain

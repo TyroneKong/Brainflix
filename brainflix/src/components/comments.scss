@@ -29,6 +29,12 @@
     background-color: $brainflixBlue;
     height: 3.5rem;
     margin-left: 6.25rem;
+    @include tablet{
+        width: 30vw;
+    }
+    @include desktop{
+        width: 20vw;
+    }
   }
   
   //primary CTA hover
@@ -59,13 +65,17 @@
       color: $silver;
     }
     &__name {
-      font-weight: bold;
-      margin-top: -3.25rem;
+        font-weight: bold;
+      margin-top: -4.25rem;
       list-style: none;
       margin-left: 1.25rem;
     }
     &__item {
+        list-style: none;
       margin: 1rem 3.125rem;
+      @include tablet{
+          margin-top: 100px;
+      }
     }
     &-container {
       margin: 0 0.625rem;

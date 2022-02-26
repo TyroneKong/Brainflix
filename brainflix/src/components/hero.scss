@@ -8,6 +8,12 @@
     display: flex;
     justify-content: center;
   }
+  &__title-heading{
+      @include tablet{
+        @include pageheaderDesktopTablet;
+      }
+      
+  }
   &__title-container {
     @include sectionheaderMobile;
     margin: 1.875rem 1.25rem;
@@ -18,47 +24,69 @@
     margin-top: 1.0625rem;
     object-fit: cover;
   }
+  &__divide{
+
+      @include tablet{
+      display: none;
+        
+      }
+  }
+
+  &__statistics {
+      padding-bottom: 40px;
+    @include desktop {
+    }
+    &-paragraph {
+      @include subheaderMobile;
+      margin: 20px 1.25rem;
+    }
+    &-icons {
+      margin-top: -1.125rem;
+      margin-left: 18.25rem;
+      position: relative;
+      bottom: 90px;
+      @include tablet{
+          margin-top: -10px;
+      }
+      @include desktop {
+        display: flex;
+      }
+    }
+    &-date {
+      color: $silver;
+      margin-bottom: 0.625rem;
+      margin-left: 1.25rem;
+      @include tablet{}
+    }
+    &-views {
+      margin-bottom: 1.25rem;
+    }
+    &-likesNumber {
+      margin-left: 0.625rem;
+      color: $silver;
+    }
+    &-viewsNumber {
+      margin-left: 0.625rem;
+      color: $silver;
+    }
+    &-views-info {
+      display: flex;
+    }
+    &-likes-info {
+      display: flex;
+    }
+    &-info {
+        
+      @include desktop {
+        display: flex;
+      }
+    }
+    &-details{
+        
+    }
+  }
+  
+
+
 }
 
-.statistics {
-  @include desktop {
-  }
-  &__paragraph {
-    @include subheaderMobile;
-    margin: 20px 1.25rem;
-  }
-  &__icons {
-    margin-top: -1.125rem;
-    margin-left: 18.25rem;
-    @include desktop {
-      display: flex;
-    }
-  }
-  &__date {
-    color: $silver;
-    margin-bottom: 0.625rem;
-    margin-left: 1.25rem;
-  }
-  &__views {
-    margin-bottom: 1.25rem;
-  }
-  &__likesNumber {
-    margin-left: 0.625rem;
-    color: $silver;
-  }
-  &__viewsNumber {
-    margin-left: 0.625rem;
-    color: $silver;
-  }
-  &__views-info {
-    display: flex;
-  }
-  &__likes-info {
-    display: flex;
-  }
-  &__info {
-    @include desktop {
-      display: flex;
-    }
-  }
-}

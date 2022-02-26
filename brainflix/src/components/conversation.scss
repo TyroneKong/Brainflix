@@ -13,6 +13,7 @@
     }
   
     &__label-heading {
+        font-weight: bold;
       display: flex;
       color: $silver;
     }
@@ -26,6 +27,10 @@
       position: relative;
       bottom: -3.375rem;
       right: -0.625rem;
+      @include tablet{
+          margin-top: -50px;
+          right: 6.25rem;
+      }
     }
     &__comment {
       list-style: none;
@@ -34,11 +39,17 @@
     &__commentCount {
       margin-left: 0.625rem;
       font-weight: bold;
+      @include tablet{
+        margin-top: -20px;
+      }
     }
   
     &__comment-container {
       margin-left: 0.625rem;
       width: 170%;
+      @include tablet{
+          display: flex;
+      }
     }
     &__label-name {
       position: relative;
@@ -70,5 +81,10 @@
       margin-left: 5rem;
       width: 70vw;
       height: 10vh;
+      @include tablet{
+          margin-left: -100px;
+          width: 30vw;
+          height: 60px;
+      }
     }
   }

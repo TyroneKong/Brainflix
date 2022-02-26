@@ -1,14 +1,14 @@
-import {Component} from "react";
-import { v4 as uuidv4 } from "uuid";
+import { Component } from "react";
+
 import "./App.scss";
 import "./assets/Font/AvenirNextLTPro-Bold.otf";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import videoDetails from "./Data/video-details.json";
 import About from "./components/about";
-import Comments from "./components/comments";
 import Conversation from "./components/conversation";
-import Video from "./components/nextVideo";
+import VideoList from "./components/videoList";
+import CommentList from "./components/commentList";
 
 // video objects
 const videoArray = videoDetails.map((video) => video);
@@ -50,63 +50,33 @@ class App extends Component {
   };
 
   render() {
-    const { currentVideo, currentVideoImage, currentVideoObject } = this.state;
+    const { currentVideoObject, allVideos } = this.state;
+    console.log(currentVideoObject);
 
-    //mapping over comments
-    const allComments = comments.map((comment) => {
-      return (
-        <Comments
-          key={uuidv4()}
-          name={comment.Name}
-          date={comment.Date}
-          comment={comment.Comment}
-        />
-      );
-    });
-
-    const numberofComments = allComments.length;
-
-    //filter video by id and map over to render the returned array of videos
-    const videos = videoArray
-      .filter((video) => video.id !== currentVideoObject.id)
-      .map((video) => {
-        return (
-          <Video
-            key={uuidv4()}
-            id={video.id}
-            title={video.title}
-            channel={video.channel}
-            image={video.image}
-            func={this.handleClick}
-          />
-        );
-      });
+    const numberofComments = comments.length;
 
     return (
       <div className="App">
         <div className="wrapper">
           <Header />
 
-          <Hero
-            video={currentVideo}
-            image={currentVideoImage}
-            current={currentVideoObject}
-          />
+          <Hero current={currentVideoObject} />
           <div className="desktop__wrapper">
-          <div className="main">
-            <About />
+            <div className="main">
+              <About />
 
-            <Conversation countComments={numberofComments} />
-            {allComments}
+              <Conversation countComments={numberofComments} />
+              <CommentList commentArray={comments} />
+            </div>
+            <div className="next__video-main">
+              <h3 className="next__videos-heading">NEXT VIDEOS</h3>
+              <VideoList
+                currentvideo={currentVideoObject}
+                videoArr={allVideos}
+                clickHandler={this.handleClick}
+              />
+            </div>
           </div>
-          <div className="next__video-main">
-            <h3 className="next__videos-heading">NEXT VIDEOS</h3>
-            {videos}
-          </div>
-
-
-          </div>
-          
         </div>
       </div>
     );

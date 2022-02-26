@@ -8,10 +8,11 @@ const Comments = ({ name, date, comment }) => {
         <div className="comment__avatar">
           
         </div>
-
+      
         <ul className="comment__item">
-          <li className="comment__name">
-            <p><span>{name}</span></p>
+          <li >
+    
+            <p className="comment__name"><span>{name}</span></p>
             <p className="comment__date">{date}</p>
           </li>
           <li className="conversation__comment">
