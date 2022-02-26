@@ -17,6 +17,7 @@ const Conversation = ({ countComments }) => {
               </label>
             </div>
             <textarea
+              htmlFor="comment"
               id="comment"
               className="conversation__text"
               name="text"
@@ -25,7 +26,11 @@ const Conversation = ({ countComments }) => {
             ></textarea>
 
             <div className="conversation__btn">
-              <img className="comment__icon" src={commentIcon}></img>
+              <img
+                className="comment__icon"
+                src={commentIcon}
+                alt="comment icon"
+              ></img>
               <button className="comment__btn">COMMENT</button>
             </div>
           </div>

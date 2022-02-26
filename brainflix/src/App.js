@@ -51,8 +51,6 @@ class App extends Component {
 
   render() {
     const { currentVideoObject, allVideos } = this.state;
-    console.log(currentVideoObject);
-
     const numberofComments = comments.length;
 
     return (

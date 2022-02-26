@@ -3,10 +3,11 @@
 
 .about {
   &__paragraph {
+    @include bodycopyMobile;
     margin: 1.25rem 1.25rem;
     @include tablet {
       padding-bottom: 5rem;
-      @include subheaderDesktopTablet;
+      @include bodycopyDesktopTablet;
     }
   }
   &__divider {

@@ -1,7 +1,7 @@
 import Comments from "./comments";
 import { v4 as uuidv4 } from "uuid";
-const CommentList = (props) => {
-  return props.commentArray.map((comment) => {
+const CommentList = ({ commentArray }) => {
+  return commentArray.map((comment) => {
     return (
       <Comments
         key={uuidv4()}

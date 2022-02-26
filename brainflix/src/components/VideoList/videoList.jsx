@@ -1,10 +1,8 @@
 import Video from "./video";
 
-const VideoList = (props) => {
-  const videos = props.videoArr;
-  console.log(videos);
-  const current = props.currentvideo;
-  console.log(current);
+const VideoList = ({ clickHandler, videoArr, currentvideo }) => {
+  const videos = videoArr;
+  const current = currentvideo;
 
   return videos
     .filter((video) => video.id !== current.id)
@@ -16,7 +14,7 @@ const VideoList = (props) => {
           title={video.title}
           channel={video.channel}
           image={video.image}
-          func={props.clickHandler}
+          func={clickHandler}
         />
       );
     });

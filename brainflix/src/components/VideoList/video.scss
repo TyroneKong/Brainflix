@@ -2,8 +2,10 @@
 @use "../../styles/partials/variables" as *;
 
 .next {
+  @include bodycopyMobile;
+  width: 180%;
   @include tablet {
-    @include subheaderDesktopTablet;
+    @include bodycopyDesktopTablet;
   }
   @include desktop {
     margin-left: -1.25rem;
@@ -24,13 +26,6 @@
   }
 
   &__videos-heading {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    // display: -webkit-inline-box;
-    // -webkit-line-clamp: 2;
-    // -webkit-box-orient: vertical;
-    // overflow: hidden;
     margin: 1.875rem 1.25rem;
     color: $silver;
   }
@@ -44,17 +39,27 @@
   &__card {
     display: flex;
   }
-  &__video-list {
-  }
 }
 
 .desktop__wrapper {
+  @include tablet {
+    padding: 0px 20px;
+  }
   @include desktop {
     display: flex;
+    margin-right: -230px;
   }
 }
 .next__video-main {
   @include desktop {
-    margin-top: -270px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -220px;
+  }
+}
+
+.main {
+  @include desktop {
+    margin-left: 70px;
   }
 }

@@ -35,11 +35,19 @@ const Hero = ({ current }) => {
 
         <div className="hero__statistics-icons">
           <div className="hero__statistics-views-info">
-            <img src={viewIcon} className="hero__statistics-views"></img>
+            <img
+              src={viewIcon}
+              className="hero__statistics-views"
+              alt="view icon"
+            ></img>
             <p className="hero__statistics-viewsNumber">{current.views}</p>
           </div>
           <div className="hero__statistics-likes-info">
-            <img src={likes} className="hero__statistics-likes"></img>
+            <img
+              src={likes}
+              className="hero__statistics-likes"
+              alt="likes icon"
+            ></img>
             <p className="hero__statistics-likesNumber">{current.likes}</p>
           </div>
         </div>

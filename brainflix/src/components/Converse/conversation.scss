@@ -30,7 +30,7 @@
     right: -0.625rem;
     @include tablet {
       margin-top: -3.125rem;
-      right: 9.25rem;
+      right: 5.25rem;
       border-radius: 2.1875rem;
       height: 4.125rem;
       width: 4.125rem;
@@ -41,11 +41,13 @@
     margin: 0.625rem 1.25rem;
   }
   &__commentCount {
+    @include bodycopyMobile;
     margin-left: 0.625rem;
     font-weight: bold;
     @include tablet {
-      @include subheaderDesktopTablet;
+      @include bodycopyDesktopTablet;
       margin-top: -4.125rem;
+      font-weight: bold;
     }
   }
 
@@ -54,7 +56,7 @@
     width: 170%;
     @include tablet {
       display: flex;
-      padding-bottom: 3.75rem;
+      padding-bottom: 1.75rem;
     }
   }
   &__label-name {
@@ -63,13 +65,14 @@
     right: -10.125rem;
   }
   &__label-comment {
+    @include subheaderMobile;
     position: relative;
     top: -1.25rem;
     right: -4.75rem;
     @include tablet {
-      @include subheaderDesktopTablet;
+      @include bodycopyDesktopTablet;
       position: relative;
-      right: 8rem;
+      right: 3rem;
     }
   }
   &__input-border-red {
@@ -94,12 +97,12 @@
     border: 2px solid $mercury;
     margin-left: 5rem;
     width: 70vw;
-    height: 10vh;
+    height: 8vh;
     @include tablet {
       margin-top: 1.25rem;
-      margin-left: -27.375rem;
-      width: 60vw;
-      height: 3.75rem;
+      margin-left: -14.375rem;
+      width: 50vw;
+      height: 2.75rem;
     }
     @include desktop {
       width: 20vw;
