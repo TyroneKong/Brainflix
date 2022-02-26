@@ -2,7 +2,6 @@
 @use "./styles/partials/mixin" as *;
 @use "./styles/partials/variables" as *;
 
-
 /* reset */
 * {
   margin: 0;
@@ -39,7 +38,7 @@ body {
 //       display: flex;
 //       justify-content: space-evenly;
 //     }
-    
+
 //   }
 // }
 
@@ -179,16 +178,12 @@ body {
 //   }
 // }
 
-
-
 // .about {
 //   &__paragraph {
 //     @include bodycopyMobile;
 //     margin: 1.25rem 1.25rem;
 //   }
 // }
-
-
 
 // /* conversation section */
 
@@ -354,8 +349,6 @@ body {
 //   }
 // }
 
-
-
 /* next video */
 
 // .next {
@@ -380,5 +373,5 @@ body {
 //   &__card {
 //     display: flex;
 //   }
-  
+
 // }

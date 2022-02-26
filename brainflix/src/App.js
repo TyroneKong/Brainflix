@@ -2,13 +2,13 @@ import { Component } from "react";
 
 import "./App.scss";
 import "./assets/Font/AvenirNextLTPro-Bold.otf";
-import Header from "./components/header";
-import Hero from "./components/hero";
+import Header from "./components/Header/header";
+import Hero from "./components/Hero/hero";
 import videoDetails from "./Data/video-details.json";
-import About from "./components/about";
-import Conversation from "./components/conversation";
-import VideoList from "./components/videoList";
-import CommentList from "./components/commentList";
+import About from "./components/About/about";
+import Conversation from "./components/Converse/conversation";
+import VideoList from "./components/VideoList/videoList";
+import CommentList from "./components/Comment/commentList";
 
 // video objects
 const videoArray = videoDetails.map((video) => video);

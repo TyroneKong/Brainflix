@@ -1,15 +1,13 @@
-
 import Video from "./video";
 
+const VideoList = (props) => {
+  const videos = props.videoArr;
+  console.log(videos);
+  const current = props.currentvideo;
+  console.log(current);
 
-const VideoList=(props)=>{
-    const videos = props.videoArr
-    console.log(videos)
-    const current = props.currentvideo
-    console.log(current)
-
-
-    return videos.filter((video) => video.id !== current.id)
+  return videos
+    .filter((video) => video.id !== current.id)
     .map((video) => {
       return (
         <Video
@@ -22,7 +20,6 @@ const VideoList=(props)=>{
         />
       );
     });
+};
 
-}
-
-export default VideoList
+export default VideoList;

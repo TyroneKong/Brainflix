@@ -1,5 +1,5 @@
-@use "../styles/partials/mixin" as *;
-@use "../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
 
 .hero {
   &__container {
@@ -8,11 +8,10 @@
     display: flex;
     justify-content: center;
   }
-  &__title-heading{
-      @include tablet{
-        @include pageheaderDesktopTablet;
-      }
-      
+  &__title-heading {
+    @include tablet {
+      @include pageheaderDesktopTablet;
+    }
   }
   &__title-container {
     @include sectionheaderMobile;
@@ -24,30 +23,29 @@
     margin-top: 1.0625rem;
     object-fit: cover;
   }
-  &__divide{
-
-      @include tablet{
+  &__divide {
+    border: 1px solid $mercury;
+    @include tablet {
       display: none;
-        
-      }
+    }
   }
 
   &__statistics {
-      padding-bottom: 2.5rem;
-      @include tablet{
-          @include subheaderDesktopTablet;
-          display: flex;
-          padding-bottom: 3.125rem
-      }
+    padding-bottom: 2.5rem;
+    @include tablet {
+      @include subheaderDesktopTablet;
+      display: flex;
+      padding-bottom: 3.125rem;
+    }
     @include desktop {
     }
     &-paragraph {
       @include subheaderMobile;
       margin: 1.25rem 1.25rem;
-      @include tablet{
+      @include tablet {
         @include subheaderDesktopTablet;
         font-weight: bold;
-          margin: 0px 1.25rem;
+        margin: 0px 1.25rem;
       }
     }
     &-icons {
@@ -55,29 +53,30 @@
       margin-left: 18.25rem;
       position: relative;
       bottom: 90px;
-      @include tablet{
-          @include subheaderDesktopTablet;
+      @include tablet {
+        @include subheaderDesktopTablet;
         display: flex;
         justify-content: flex-end;
-          column-gap: .625rem;
-          margin-top: .625rem;
-          
+        column-gap: 0.625rem;
+        margin-top: 0.625rem;
       }
       @include desktop {
         display: flex;
+        margin-right: 800px;
       }
     }
-    &-likes{
-        @include tablet{
-            width: 1.25rem;
-            margin-top: -1.25rem;
-        }
+    &-likes {
+      @include tablet {
+        width: 1.25rem;
+        margin-top: -1.25rem;
+      }
     }
     &-date {
       color: $silver;
       margin-bottom: 0.625rem;
       margin-left: 1.25rem;
-      @include tablet{}
+      @include tablet {
+      }
     }
     &-views {
       margin-bottom: 1.25rem;
@@ -85,8 +84,8 @@
     &-likesNumber {
       margin-left: 0.625rem;
       color: $silver;
-      @include tablet{
-          margin-left: 1rem;
+      @include tablet {
+        margin-left: 1rem;
       }
     }
     &-viewsNumber {
@@ -98,20 +97,13 @@
     }
     &-likes-info {
       display: flex;
-      
     }
     &-info {
-        
       @include desktop {
         display: flex;
       }
     }
-    &-details{
-        
+    &-details {
     }
   }
-  
-
-
 }
-

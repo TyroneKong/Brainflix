@@ -11,7 +11,7 @@ const Video = ({ func, title, channel, image, id }) => {
       >
         <div className="next__card">
           <img className="next__image" src={image}></img>
-          <ul>
+          <ul className="next__video-list">
             <li className="next__title">
               <span>{title}</span>
             </li>

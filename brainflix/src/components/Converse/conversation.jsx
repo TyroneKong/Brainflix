@@ -1,6 +1,5 @@
-import commentIcon from "../assets/Icons/add_comment.svg";
-import "./conversation.scss"
-
+import commentIcon from "../../assets/Icons/add_comment.svg";
+import "./conversation.scss";
 
 const Conversation = ({ countComments }) => {
   return (
@@ -12,13 +11,11 @@ const Conversation = ({ countComments }) => {
               {countComments} Comments
             </p>
             <div className="conversation__avatar"></div>
-
             <div className="conversation__label-comment">
               <label htmlFor="comment" className="conversation__label-heading">
                 JOIN THE CONVERSATION
               </label>
             </div>
-
             <textarea
               id="comment"
               className="conversation__text"
@@ -26,16 +23,15 @@ const Conversation = ({ countComments }) => {
               placeholder="Add a new comment"
               required
             ></textarea>
-          
-          `
-          <div className="conversation__btn">
-            <img className="comment__icon" src={commentIcon}></img>
-            <button className="comment__btn">COMMENT</button>
+
+            <div className="conversation__btn">
+              <img className="comment__icon" src={commentIcon}></img>
+              <button className="comment__btn">COMMENT</button>
+            </div>
           </div>
-          `</div>
         </div>
       </form>
-      <hr className="divide" />
+      <hr className="conversation__divide" />
     </section>
   );
 };

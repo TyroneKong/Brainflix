@@ -1,5 +1,5 @@
-import viewIcon from "../assets/Icons/views.svg";
-import likes from "../assets/Icons/likes.svg";
+import viewIcon from "../../assets/Icons/views.svg";
+import likes from "../../assets/Icons/likes.svg";
 import "./hero.scss";
 
 const Hero = ({ current }) => {
@@ -13,13 +13,7 @@ const Hero = ({ current }) => {
     <>
       <section className="hero">
         <div className="hero__container">
-          <video
-            poster={current.image}
-            className="hero__video"
-            width="750"
-            height="500"
-            controls
-          >
+          <video poster={current.image} className="hero__video" controls>
             <source src={current.video}></source>
           </video>
         </div>
