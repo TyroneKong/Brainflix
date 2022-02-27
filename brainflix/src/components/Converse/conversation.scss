@@ -18,8 +18,8 @@
     font-weight: bold;
     display: flex;
     color: $silver;
-    @include tablet {
-    }
+    // @include tablet {
+    // }
   }
 
   &__avatar {
@@ -35,13 +35,13 @@
       margin-top: -3.125rem;
       right: 6.25rem;
       border-radius: 2.1875rem;
-      height: 4.125rem;
-      width: 4.125rem;
+      height: 3.125rem;
+      width: 3.125rem;
     }
     @include desktop {
       border-radius: 2.1875rem;
-      height: 4.125rem;
-      width: 4.125rem;
+      height: 3.125rem;
+      width: 3.125rem;
     }
   }
   &__comment {

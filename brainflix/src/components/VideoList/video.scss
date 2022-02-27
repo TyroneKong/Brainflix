@@ -26,12 +26,15 @@
     list-style: none;
   }
   &__bold {
-    word-wrap: break-word;
+    word-break: break-all;
   }
 
   &__videos-heading {
     margin: 1.875rem 1.25rem;
     color: $silver;
+    @include desktop {
+      margin-left: -1.25rem;
+    }
   }
   &__title {
     margin: 1.25rem 0.625rem;
@@ -58,7 +61,7 @@
   @include desktop {
     display: flex;
     flex-direction: column;
-    margin: -250px 100px;
+    margin: -250px 200px;
   }
 }
 

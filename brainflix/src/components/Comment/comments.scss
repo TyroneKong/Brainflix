@@ -34,7 +34,7 @@ button {
     height: 3rem;
   }
   @include desktop {
-    width: 15vw;
+    width: 10vw;
   }
 }
 
@@ -92,8 +92,8 @@ button:hover {
     background-size: cover;
     @include tablet {
       border-radius: 2.1875rem;
-      height: 4.125rem;
-      width: 4.125rem;
+      height: 3.125rem;
+      width: 3.125rem;
     }
   }
   &__icon {
@@ -103,6 +103,10 @@ button:hover {
       position: relative;
       left: 5rem;
       top: 0.3125rem;
+    }
+    @include desktop {
+      position: relative;
+      left: 4rem;
     }
   }
   &__divider {

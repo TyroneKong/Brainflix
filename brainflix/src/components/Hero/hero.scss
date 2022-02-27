@@ -7,6 +7,9 @@
     background-color: black;
     display: flex;
     justify-content: center;
+    @include tablet {
+      padding-top: 0.625rem;
+    }
   }
   &__title-heading {
     @include sectionheaderMobile;
@@ -14,7 +17,7 @@
       @include sectionheaderDesktopTablet;
     }
     @include desktop {
-      margin: 50px 100px;
+      margin: 3.125rem 6.25rem;
     }
   }
   &__title-container {
@@ -22,13 +25,14 @@
     margin: 1.875rem 1.25rem;
   }
   &__video {
-    max-width: 100%;
-    height: auto;
+    width: 120%;
+    height: 18.75rem;
     @include tablet {
+      height: 37.5rem;
       max-width: 90%;
     }
     @include desktop {
-      height: 600px;
+      height: 37.5rem;
       width: 70%;
     }
     object-fit: cover;
@@ -57,7 +61,7 @@
       @include tablet {
         @include bodycopyDesktopTablet;
         font-weight: bold;
-        margin: 0px 1.25rem;
+        margin: 0rem 1.25rem;
       }
       @include desktop {
       }
@@ -66,7 +70,7 @@
       margin-top: -1.125rem;
       margin-left: 18.25rem;
       position: relative;
-      bottom: 90px;
+      bottom: 5.625rem;
       @include tablet {
         @include bodycopyDesktopTablet;
         display: flex;
@@ -76,7 +80,7 @@
       }
       @include desktop {
         display: flex;
-        margin-right: 30rem;
+        margin-right: 35rem;
       }
     }
     &-likes {
@@ -117,8 +121,6 @@
       @include desktop {
         display: flex;
       }
-    }
-    &-details {
     }
   }
 }

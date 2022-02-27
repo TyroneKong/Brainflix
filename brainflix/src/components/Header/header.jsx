@@ -22,11 +22,9 @@ const Header = (props) => {
 
       <div className="upload">
         <button className="upload__button">
-          {" "}
           <img className="upload__icon" src={uploadSVG} alt="upload icon"></img>
           UPLOAD
         </button>
-
         <div className="upload__tablet-avatar"></div>
       </div>
     </header>
