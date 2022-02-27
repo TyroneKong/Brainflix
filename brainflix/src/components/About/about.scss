@@ -9,13 +9,13 @@
       padding-bottom: 5rem;
       @include bodycopyDesktopTablet;
       @include desktop {
-        margin-bottom: 50px;
-        padding-left: 80px;
+        margin-bottom: 3.125rem;
+        padding-left: 5rem;
       }
     }
   }
   &__divider {
+    margin-top: -90px;
     border: 1px solid $mercury;
-    margin-top: -4.375rem;
   }
 }

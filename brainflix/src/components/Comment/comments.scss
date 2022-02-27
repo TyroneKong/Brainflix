@@ -35,12 +35,13 @@ button {
   }
   @include desktop {
     width: 10vw;
+    margin-left: 30px;
   }
 }
 
 //primary CTA hover
 button:hover {
-  background-color: #000000;
+  background-color: $brainflixDarkBlue;
 }
 
 .comment {
@@ -79,7 +80,7 @@ button:hover {
   &-container {
     margin: 0 0.625rem;
     @include desktop {
-      padding-left: 80px;
+      padding-left: 5rem;
     }
   }
 

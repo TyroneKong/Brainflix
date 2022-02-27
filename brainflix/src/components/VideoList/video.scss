@@ -19,7 +19,7 @@
     height: 7.5rem;
     @include desktop {
       height: 5.5rem;
-      width: 140px;
+      width: 8.75rem;
     }
   }
   li {
@@ -32,6 +32,10 @@
   &__videos-heading {
     margin: 1.875rem 1.25rem;
     color: $silver;
+    @include tablet {
+      @include bodycopyDesktopTablet;
+      font-weight: bold;
+    }
     @include desktop {
       margin-left: -1.25rem;
     }
@@ -61,7 +65,7 @@
   @include desktop {
     display: flex;
     flex-direction: column;
-    margin: -230px 160px;
+    margin: -14.375rem 10rem;
   }
 }
 

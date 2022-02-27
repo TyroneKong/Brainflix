@@ -60,13 +60,13 @@ header {
     }
     @include desktop {
       position: relative;
-      left: 130px;
+      left: 8.125rem;
       padding-left: 15.625rem;
     }
   }
 
   &__avatar {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     border-radius: 1.5625rem;
     height: 3.125rem;
     width: 3.125rem;
@@ -84,13 +84,13 @@ header {
     display: flex;
   }
   @include desktop {
-    margin-right: 100px;
+    margin-right: 6.25rem;
   }
 
   &__button {
     height: 3.125rem;
-    margin-right: 4rem;
-    width: 70vw;
+    margin-right: 3rem;
+    width: 75vw;
     border: none;
     border-radius: 0.375rem;
     display: flex;
@@ -106,14 +106,15 @@ header {
       padding-right: 3.125rem;
     }
     @include desktop {
-      height: 2.5rem;
+      margin-bottom: 10px;
+      height: 3.1rem;
       width: 10vw;
       padding-right: 1.875rem;
     }
   }
   &__icon {
     position: relative;
-    right: 4.75rem;
+    right: 1.75rem;
     @include tablet {
       position: relative;
       right: 0rem;

@@ -12,28 +12,7 @@ import CommentList from "./components/Comment/commentList";
 
 // video objects
 const videoArray = videoDetails.map((video) => video);
-
-// comments
-const comments = [
-  {
-    Name: "Michael Lyons",
-    Comment:
-      "They BLEW the ROOF off at their lastevent, once everyone started figuringout they were going. This is still simplythe greatest opening of an event I have EVER witnessed.",
-    Date: "08/09/2021",
-  },
-  {
-    Name: "Gary Wong",
-    Comment:
-      "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish Ican ride like him one day so I can really enjoy myself!",
-    Date: "07/15/2021",
-  },
-  {
-    Name: "Theodore Duncan",
-    Comment:
-      "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
-    Date: "07/11/2021",
-  },
-];
+const comments = videoArray[0].comments;
 
 class App extends Component {
   // managing state

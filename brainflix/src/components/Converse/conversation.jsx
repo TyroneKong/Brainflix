@@ -36,6 +36,7 @@ const Conversation = ({ countComments }) => {
           </div>
         </div>
       </form>
+
       <hr className="conversation__divide" />
     </section>
   );
