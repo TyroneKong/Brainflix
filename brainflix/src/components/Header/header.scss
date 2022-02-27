@@ -40,6 +40,7 @@ header {
     border: 2px solid $mercury;
     padding: 0 1.875rem;
     width: 60vw;
+    margin-left: 20px;
     @include tablet {
       display: flex;
       width: 25vw;
@@ -53,7 +54,7 @@ header {
 
   &__icon {
     position: relative;
-    left: 1.25rem;
+    left: 3.25rem;
     @include tablet {
       margin-left: 1.25rem;
     }
@@ -65,6 +66,7 @@ header {
   }
 
   &__avatar {
+    margin-left: 20px;
     border-radius: 1.5625rem;
     height: 3.125rem;
     width: 3.125rem;
@@ -111,14 +113,14 @@ header {
   }
   &__icon {
     position: relative;
-    right: 3.75rem;
+    right: 4.75rem;
     @include tablet {
       position: relative;
-      right: 0px;
+      right: 0rem;
     }
     @include desktop {
       position: relative;
-      right: 0px;
+      right: 0rem;
     }
   }
   &__tablet-avatar {
@@ -130,7 +132,7 @@ header {
       background-size: cover;
     }
     @include desktop {
-      margin-right: 100px;
+      margin-right: 100;
     }
   }
 }

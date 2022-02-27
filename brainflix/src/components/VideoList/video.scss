@@ -54,14 +54,14 @@
   }
   @include desktop {
     display: flex;
-    margin-right: -300px;
+    margin-right: -150px;
   }
 }
 .next__video-main {
   @include desktop {
     display: flex;
     flex-direction: column;
-    margin: -250px 200px;
+    margin: -230px 160px;
   }
 }
 
