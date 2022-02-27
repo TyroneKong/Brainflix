@@ -9,7 +9,7 @@
   }
   @include desktop {
     margin-left: -1.25rem;
-    width: 45.75rem;
+    width: 35.75rem;
   }
   margin-left: 1.25rem;
   &__image {
@@ -18,11 +18,15 @@
     width: 12.5rem;
     height: 7.5rem;
     @include desktop {
-      width: 200px;
+      height: 5.5rem;
+      width: 140px;
     }
   }
   li {
     list-style: none;
+  }
+  &__bold {
+    word-wrap: break-word;
   }
 
   &__videos-heading {
@@ -47,19 +51,21 @@
   }
   @include desktop {
     display: flex;
-    margin-right: -230px;
+    margin-right: -300px;
   }
 }
 .next__video-main {
   @include desktop {
     display: flex;
     flex-direction: column;
-    margin-top: -220px;
+    margin: -250px 100px;
   }
 }
 
 .main {
   @include desktop {
-    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 }

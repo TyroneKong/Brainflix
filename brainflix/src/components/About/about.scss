@@ -8,6 +8,10 @@
     @include tablet {
       padding-bottom: 5rem;
       @include bodycopyDesktopTablet;
+      @include desktop {
+        margin-bottom: 50px;
+        padding-left: 80px;
+      }
     }
   }
   &__divider {

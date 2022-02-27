@@ -6,6 +6,9 @@
   flex-direction: column;
   border-radius: 0.25rem;
   box-sizing: border-box;
+  @include desktop {
+    padding-left: 80px;
+  }
 
   &__form * {
     box-sizing: border-box;
@@ -30,7 +33,12 @@
     right: -0.625rem;
     @include tablet {
       margin-top: -3.125rem;
-      right: 5.25rem;
+      right: 6.25rem;
+      border-radius: 2.1875rem;
+      height: 4.125rem;
+      width: 4.125rem;
+    }
+    @include desktop {
       border-radius: 2.1875rem;
       height: 4.125rem;
       width: 4.125rem;
@@ -105,7 +113,8 @@
       height: 2.75rem;
     }
     @include desktop {
-      width: 20vw;
+      margin-left: -270px;
+      width: 40vw;
     }
   }
   &__divide {

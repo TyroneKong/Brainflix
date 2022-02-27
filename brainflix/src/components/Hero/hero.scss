@@ -13,6 +13,9 @@
     @include tablet {
       @include sectionheaderDesktopTablet;
     }
+    @include desktop {
+      margin: 50px 100px;
+    }
   }
   &__title-container {
     @include sectionheaderMobile;
@@ -25,7 +28,8 @@
       max-width: 90%;
     }
     @include desktop {
-      max-width: 70%;
+      height: 600px;
+      width: 70%;
     }
     object-fit: cover;
   }
@@ -43,6 +47,9 @@
       display: flex;
       padding-bottom: 3.125rem;
     }
+    @include desktop {
+      padding-left: 100px;
+    }
     &-paragraph {
       @include bodycopyMobile;
       font-weight: bold;
@@ -51,6 +58,8 @@
         @include bodycopyDesktopTablet;
         font-weight: bold;
         margin: 0px 1.25rem;
+      }
+      @include desktop {
       }
     }
     &-icons {
@@ -67,7 +76,7 @@
       }
       @include desktop {
         display: flex;
-        margin-right: 50rem;
+        margin-right: 30rem;
       }
     }
     &-likes {

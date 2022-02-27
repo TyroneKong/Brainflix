@@ -27,14 +27,14 @@ button {
   color: #ffff;
   background-color: $brainflixBlue;
   height: 3.5rem;
-  margin-left: 6.25rem;
+  margin-left: 5.9375rem;
   @include tablet {
     margin-left: 2rem;
     width: 20vw;
     height: 3rem;
   }
   @include desktop {
-    width: 10vw;
+    width: 15vw;
   }
 }
 
@@ -78,6 +78,9 @@ button:hover {
   }
   &-container {
     margin: 0 0.625rem;
+    @include desktop {
+      padding-left: 80px;
+    }
   }
 
   &__avatar {
