@@ -14,6 +14,7 @@ const VideoList = ({ clickHandler, videoArr, currentvideo }) => {
           id={video.id}
           title={video.title}
           channel={video.channel}
+          comment={video.comment}
           image={video.image}
           func={clickHandler}
         />
