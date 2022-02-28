@@ -1,5 +1,4 @@
 import { Component } from "react";
-
 import "./App.scss";
 import "./assets/Font/AvenirNextLTPro-Bold.otf";
 import Header from "./components/Header/header";
