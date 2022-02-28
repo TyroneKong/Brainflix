@@ -4,6 +4,7 @@ const VideoList = ({ clickHandler, videoArr, currentvideo }) => {
   const videos = videoArr;
   const current = currentvideo;
 
+  // filter the video id
   return videos
     .filter((video) => video.id !== current.id)
     .map((video) => {
