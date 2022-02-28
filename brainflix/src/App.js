@@ -15,7 +15,6 @@ const videoArray = videoDetails.map((video) => video);
 // const comments = videoArray[0].comments;
 
 const commentsArray = videoArray.map((video) => video.comments);
-// console.log(commentsArray[0]);
 
 class App extends Component {
   // managing state
