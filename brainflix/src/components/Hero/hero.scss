@@ -15,6 +15,7 @@
     @include sectionheaderMobile;
     @include tablet {
       @include sectionheaderDesktopTablet;
+      margin-left: 0.8125rem;
     }
     @include desktop {
       margin: 3.125rem 6.25rem;
@@ -52,7 +53,7 @@
       padding-bottom: 3.125rem;
     }
     @include desktop {
-      padding-left: 100px;
+      padding-left: 6.25rem;
     }
     &-paragraph {
       @include bodycopyMobile;
@@ -61,13 +62,13 @@
       @include tablet {
         @include bodycopyDesktopTablet;
         font-weight: bold;
-        margin: 0rem 1.25rem;
+        margin: 0rem 2.3125rem;
       }
       @include desktop {
       }
     }
     &-icons {
-      margin-left: 18.25rem;
+      margin-left: 35.25rem;
       position: relative;
       bottom: 5.625rem;
       @include tablet {
@@ -126,5 +127,5 @@
 }
 
 .hero__video-icons {
-  margin-top: 100px;
+  margin-top: 6.25rem;
 }

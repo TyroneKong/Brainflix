@@ -30,11 +30,11 @@ button {
   margin: 1.25rem 5.9375rem;
   @include tablet {
     margin: 0rem 2rem;
-    width: 20vw;
+    width: 23vw;
     height: 3rem;
   }
   @include desktop {
-    width: 10vw;
+    width: 20vw;
     margin-left: 30px;
   }
 }
