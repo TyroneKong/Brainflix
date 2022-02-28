@@ -1,12 +1,12 @@
 import viewIcon from "../../assets/Icons/views.svg";
 import likes from "../../assets/Icons/likes.svg";
 import "./hero.scss";
-import play from "../../assets/Icons/play.svg";
-import pause from "../../assets/Icons/pause.svg";
-import volumeOff from "../../assets/Icons/volume_off.svg";
-import volumeUp from "../../assets/Icons/volume_up.svg";
-import fullscreen from "../../assets/Icons/fullscreen.svg";
-import closeFullscreen from "../../assets/Icons/close_fullscreen.svg";
+// import play from "../../assets/Icons/play.svg";
+// import pause from "../../assets/Icons/pause.svg";
+// import volumeOff from "../../assets/Icons/volume_off.svg";
+// import volumeUp from "../../assets/Icons/volume_up.svg";
+// import fullscreen from "../../assets/Icons/fullscreen.svg";
+// import closeFullscreen from "../../assets/Icons/close_fullscreen.svg";
 
 const Hero = ({ current }) => {
   const timestamp = current.timestamp;
@@ -22,26 +22,6 @@ const Hero = ({ current }) => {
           <video poster={current.image} className="hero__video" controls>
             <source src={current.video}></source>
           </video>
-          <div hero__video-icons>
-            <div className="play">
-              <img src={play}></img>
-            </div>
-            <div className="pause">
-              <img src={pause}></img>
-            </div>
-            <div className="volumeOff">
-              <img src={volumeOff}></img>
-            </div>
-            <div className="volumeUp">
-              <img src={volumeUp}></img>
-            </div>
-            <div className="fullscreen">
-              <img src={fullscreen}></img>
-            </div>
-            <div className="closeFullscreen">
-              <img src={closeFullscreen}></img>
-            </div>
-          </div>
         </div>
         <div className="hero__title-container">
           <h1 className="hero__title-heading">{current.title}</h1>

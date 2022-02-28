@@ -79,7 +79,8 @@
       }
       @include desktop {
         display: flex;
-        margin-right: 48rem;
+        justify-content: center;
+        margin-left: 12.5rem;
       }
     }
     &-likes {
