@@ -11,6 +11,7 @@ import CommentList from "./components/Comment/commentList";
 
 // video objects
 const videoArray = videoDetails.map((video) => video);
+//comments array
 const comments = videoArray[0].comments;
 
 class App extends Component {
