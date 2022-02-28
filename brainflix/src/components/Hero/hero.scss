@@ -88,10 +88,13 @@
       }
     }
     &-likes {
-      margin-right: 15px;
+      margin-right: 0.9375rem;
       @include tablet {
         width: 1.25rem;
-        margin-top: 0px;
+        margin-top: 0rem;
+      }
+      @include desktop {
+        margin-right: 0rem;
       }
     }
     &-date {
@@ -106,7 +109,7 @@
       margin-bottom: 1.25rem;
     }
     &-likesNumber {
-      margin-right: 14px;
+      margin-right: 0.875rem;
       color: $silver;
       @include tablet {
         margin: 1rem 1rem;
