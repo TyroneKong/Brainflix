@@ -20,6 +20,7 @@
     @include desktop {
       height: 5.5rem;
       width: 8.75rem;
+      margin-left: -50px;
     }
   }
   li {
@@ -30,14 +31,15 @@
   }
 
   &__videos-heading {
-    margin: 1.875rem 1.25rem;
+    margin: 1.875rem 2.0625rem;
     color: $silver;
     @include tablet {
       @include bodycopyDesktopTablet;
       font-weight: bold;
     }
     @include desktop {
-      margin-left: -1.25rem;
+      padding-top: 20px;
+      margin: 2rem -55px;
     }
   }
   &__title {
@@ -58,14 +60,14 @@
   }
   @include desktop {
     display: flex;
-    margin-right: -9.375rem;
+    margin-right: -22.375rem;
   }
 }
 .next__video-main {
   @include desktop {
     display: flex;
     flex-direction: column;
-    margin: -17.375rem 10rem;
+    margin: -20.375rem 6rem;
   }
 }
 

@@ -45,13 +45,15 @@ class App extends Component {
               <Conversation countComments={numberofComments} />
               <CommentList commentArray={comments} />
             </div>
-            <div className="next__video-main">
-              <h3 className="next__videos-heading">NEXT VIDEOS</h3>
-              <VideoList
-                currentvideo={currentVideoObject}
-                videoArr={allVideos}
-                clickHandler={this.handleClick}
-              />
+            <div>
+              <div className="next__video-main">
+                <h3 className="next__videos-heading">NEXT VIDEOS</h3>
+                <VideoList
+                  currentvideo={currentVideoObject}
+                  videoArr={allVideos}
+                  clickHandler={this.handleClick}
+                />
+              </div>
             </div>
           </div>
         </div>
