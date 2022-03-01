@@ -15,7 +15,7 @@ const videoArray = videoDetails.map((video) => video);
 // const comments = videoArray[0].comments;
 
 const commentsArray = videoArray.map((video) => video.comments);
-// console.log(commentsArray[0]);
+//console.log(commentsArray[0]);
 
 class App extends Component {
   // managing state
@@ -24,22 +24,23 @@ class App extends Component {
     allVideos: videoArray,
     currentComment: commentsArray[0],
     allComments: commentsArray,
+    numberComments: commentsArray.length,
   };
 
   //function to change state based on id
   handleClick = (videoId) => {
     const { allVideos } = this.state;
     const foundVideo = allVideos.find((video) => video.id === videoId);
-    console.log(foundVideo.comments);
+
     this.setState({ currentVideoObject: foundVideo });
     this.setState({ currentComment: foundVideo.comments });
+    this.setState({ numberComments: foundVideo.comments.length });
   };
 
   render() {
-    const { currentVideoObject, allVideos, currentComment, allComments } =
+    const { currentVideoObject, allVideos, currentComment, numberComments } =
       this.state;
-    const numberofComments = allComments.length;
-
+    console.log(numberComments);
     return (
       <div className="App">
         <div className="wrapper">
@@ -50,7 +51,7 @@ class App extends Component {
             <div className="main">
               <About />
 
-              <Conversation countComments={numberofComments} />
+              <Conversation countComments={numberComments} />
               <CommentList commentArray={currentComment} />
             </div>
             <div className="next__video-main">
