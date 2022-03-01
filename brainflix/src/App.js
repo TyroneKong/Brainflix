@@ -11,11 +11,10 @@ import CommentList from "./components/Comment/commentList";
 
 // video object
 const videoArray = videoDetails.map((video) => video);
-//comments array
-// const comments = videoArray[0].comments;
+// console.log(videoArray);
 
 const commentsArray = videoArray.map((video) => video.comments);
-//console.log(commentsArray[0]);
+// console.log(commentsArray);
 
 class App extends Component {
   // managing state
@@ -24,7 +23,7 @@ class App extends Component {
     allVideos: videoArray,
     currentComment: commentsArray[0],
     allComments: commentsArray,
-    numberComments: commentsArray.length,
+    numberComments: commentsArray[0].length,
   };
 
   //function to change state based on id
@@ -40,7 +39,7 @@ class App extends Component {
   render() {
     const { currentVideoObject, allVideos, currentComment, numberComments } =
       this.state;
-    console.log(numberComments);
+    // console.log(numberComments);
     return (
       <div className="App">
         <div className="wrapper">
