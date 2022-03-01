@@ -24,7 +24,7 @@ class App extends Component {
     allVideos: videoArray,
     currentComment: commentsArray[0],
     allComments: commentsArray,
-    numberComments: commentsArray.length,
+    numberComments: commentsArray[0].length,
   };
 
   //function to change state based on id
