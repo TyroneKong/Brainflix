@@ -2,8 +2,8 @@
 @use "../../styles/partials/variables" as *;
 
 .upload {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   &__header {
     @include tablet {
       display: flex;
@@ -92,5 +92,10 @@
   &__button-cancel {
     background-color: #ffff;
     color: $brainflixBlue;
+  }
+  &__button-publish {
+    @include desktop {
+      display: none;
+    }
   }
 }
