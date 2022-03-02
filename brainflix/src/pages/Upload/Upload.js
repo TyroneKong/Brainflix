@@ -7,9 +7,7 @@ class Upload extends React.Component {
   render() {
     return (
       <div>
-        <div className="upload__header">
-          <Header />
-        </div>
+        <div className="upload__header"></div>
         <hr className="divider"></hr>
 
         <div className="uploader">

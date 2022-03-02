@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom'
 const Header = (props) => {
   return (
     <header className="header">
+      <Link to="/">
       <div className="header__logo">
         <img
           className="header__logo-image"
@@ -18,6 +19,9 @@ const Header = (props) => {
         ></img>
       </div>
 
+      
+      </Link>
+    
       <div className="search">
         <img className="search__icon" src={searchIcon} alt="search icon"></img>
         <input className="search__input" placeholder="Search"></input>
@@ -25,7 +29,7 @@ const Header = (props) => {
       </div>
     
       <div className="upload">
-        <Link to="/" >
+        <Link to="/upload" >
         <button className="upload__button">
           <img className="upload__icon" src={uploadSVG} alt="upload icon"></img>
           UPLOAD
