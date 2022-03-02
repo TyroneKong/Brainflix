@@ -10,36 +10,37 @@ class Upload extends React.Component {
         <div className="upload__header">
           <Header />
         </div>
-        <div className="upload">
-          <hr className="divider"></hr>
-          <div className="upload__heading-container">
-            <h1 className="upload__heading">Upload Video</h1>
+        <hr className="divider"></hr>
+
+        <div className="uploader">
+          <div className="uploader__heading-container">
+            <h1 className="uploader__heading">Upload Video</h1>
           </div>
-          <div className="upload__container">
-            <div className="upload__thumbnail">
-              <h2 className="upload__thumbnail-heading">VIDEO THUMBNAIL</h2>
+          <div className="uploader__container">
+            <div className="uploader__thumbnail">
+              <h2 className="uploader__thumbnail-heading">VIDEO THUMBNAIL</h2>
               <img
-                className="upload__thumbnail-image"
+                className="uploader__thumbnail-image"
                 src={thumbnailImage}
                 alt="bicycle handlebars"
               ></img>
             </div>
-            <form className="upload__form">
-              <div className="upload__input-container">
-                <label className="upload__input-label">
+            <form className="uploader__form">
+              <div className="uploader__input-container">
+                <label className="uploader__input-label">
                   TITLE YOUR VIDEO
                   <input
-                    className="upload__input"
+                    className="uploader__input"
                     placeholder="Add a title to your video"
                   ></input>
                 </label>
               </div>
 
-              <div className="upload__textarea-container">
-                <label className="upload__textarea-label">
+              <div className="uploader__textarea-container">
+                <label className="uploader__textarea-label">
                   ADD A VIDEO DESCRIPTION
                   <textarea
-                    className="upload__textarea"
+                    className="uploader__textarea"
                     placeholder="Add a description to your video"
                   ></textarea>
                 </label>
@@ -47,10 +48,10 @@ class Upload extends React.Component {
             </form>
           </div>
 
-          <div className="upload__buttons">
-            <button className="upload__button-publish">PUBLISH</button>
-            <button className="upload__button-cancel">CANCEL</button>
-            <button className="upload__button-publishDesktop">PUBLISH</button>
+          <div className="uploader__buttons">
+            <button className="uploader__button-publish">PUBLISH</button>
+            <button className="uploader__button-cancel">CANCEL</button>
+            <button className="uploader__button-publishDesktop">PUBLISH</button>
           </div>
         </div>
       </div>
