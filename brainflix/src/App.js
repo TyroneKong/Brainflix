@@ -8,6 +8,10 @@ import About from "./components/About/about";
 import Conversation from "./components/Converse/conversation";
 import VideoList from "./components/VideoList/videoList";
 import CommentList from "./components/Comment/commentList";
+import { Switch, Route } from "react-router-dom";
+import { Home } from "./pages/Home/Home";
+import Video from "./components/VideoList/video";
+import Upload from "./pages/Upload/Upload";
 
 // video object
 const videoArray = videoDetails.map((video) => video);
@@ -42,6 +46,12 @@ class App extends Component {
     // console.log(numberComments);
     return (
       <div className="App">
+        <Upload />
+        {/* <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/video" component={Video} />
+        </Switch>
+
         <div className="wrapper">
           <Header />
 
@@ -62,7 +72,7 @@ class App extends Component {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
