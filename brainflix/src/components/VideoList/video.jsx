@@ -1,7 +1,8 @@
 import "./video.scss";
 import { Link } from "react-router-dom";
 
-const Video = ({ title, channel, image, id }) => {
+const Video = ({ title, channel, image, id, video }) => {
+  
   return (
     <div className="vertical">
       <div>
@@ -9,7 +10,10 @@ const Video = ({ title, channel, image, id }) => {
           <div className="next__videos">
             <div className="next__card">
               <Link to={`/video/${id}`}>
-                <img className="next__image" src={image} alt="video"></img>
+                {/* <img className="next__image" src={image} alt="video"></img> */}
+                <video className="next__image" poster={image}>
+                  <source src={video}></source>
+                </video>
               </Link>
               <ul className="next__video-list">
                 <li className="next__title">

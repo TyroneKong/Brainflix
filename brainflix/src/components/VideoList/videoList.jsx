@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Video from "./video";
 
 const VideoList = ({ videoArr, currentvideo }) => {
@@ -17,6 +16,7 @@ const VideoList = ({ videoArr, currentvideo }) => {
           channel={video.channel}
           comment={video.comment}
           image={video.image}
+          video={video.video}
         />
       );
     });
