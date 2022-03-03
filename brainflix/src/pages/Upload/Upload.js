@@ -1,4 +1,3 @@
-import Header from "../../components/Header/header";
 import thumbnailImage from "../../assets/Images//Upload-video-preview.jpg";
 import React from "react";
 

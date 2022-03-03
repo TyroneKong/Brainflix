@@ -29,7 +29,7 @@ const Header = (props) => {
       </div>
     
       <div className="upload">
-        <Link to="/upload" >
+        <Link className="upload__link" to="/upload" >
         <button className="upload__button">
           <img className="upload__icon" src={uploadSVG} alt="upload icon"></img>
           UPLOAD

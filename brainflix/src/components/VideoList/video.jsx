@@ -1,18 +1,16 @@
 import "./video.scss";
+import { Link } from "react-router-dom";
 
-const Video = ({ func, title, channel, image, id }) => {
+const Video = ({ title, channel, image, id }) => {
   return (
     <div className="vertical">
       <div>
         <section className="next">
-          <div
-            className="next__videos"
-            onClick={(event) => {
-              func(id);
-            }}
-          >
+          <div className="next__videos">
             <div className="next__card">
-              <img className="next__image" src={image} alt="video"></img>
+              <Link to={`/video/${id}`}>
+                <img className="next__image" src={image} alt="video"></img>
+              </Link>
               <ul className="next__video-list">
                 <li className="next__title">
                   <p className="next__bold">

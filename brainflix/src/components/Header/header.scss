@@ -22,6 +22,7 @@ header {
     }
   }
   &__logo-image {
+    text-decoration: none;
     @include desktop {
     }
   }
@@ -86,7 +87,9 @@ header {
   @include desktop {
     margin-right: 6.25rem;
   }
-
+  &__link {
+    text-decoration: none;
+  }
   &__button {
     height: 3.125rem;
     margin-right: 3rem;
