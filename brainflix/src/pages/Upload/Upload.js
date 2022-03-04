@@ -14,8 +14,8 @@ class Upload extends React.Component {
             <h1 className="uploader__heading">Upload Video</h1>
           </div>
           <div className="uploader__container">
+            <h2 className="uploader__thumbnail-heading">VIDEO THUMBNAIL</h2>
             <div className="uploader__thumbnail">
-              <h2 className="uploader__thumbnail-heading">VIDEO THUMBNAIL</h2>
               <img
                 className="uploader__thumbnail-image"
                 src={thumbnailImage}

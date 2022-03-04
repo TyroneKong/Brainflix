@@ -5,6 +5,7 @@
   @include tablet {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   &__header {
@@ -22,19 +23,24 @@
     flex-direction: column;
     align-items: center;
     @include tablet {
+      display: flex;
+      flex-direction: row;
     }
   }
   &__thumbnail-image {
+    border-radius: 2rem;
     width: 100vw;
     padding: 10px 20px;
+    aspect-ratio: 16/9;
     @include tablet {
-      width: 100vw;
+      width: 50vw;
     }
     @include desktop {
       width: 40vw;
     }
   }
   &__thumbnail-heading {
+    padding-top: 70px;
     color: $silver;
   }
   &__heading-container {
@@ -42,7 +48,6 @@
   &__container {
     @include desktop {
       display: flex;
-      justify-content: center;
     }
   }
 
@@ -84,10 +89,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+    }
     @include desktop {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
     }
   }
   &__button-cancel {
@@ -95,12 +103,18 @@
     color: $brainflixBlue;
   }
   &__button-publish {
+    @include tablet {
+      display: none;
+    }
     @include desktop {
       display: none;
     }
   }
   &__button-publishDesktop {
     display: none;
+    @include tablet {
+      display: block;
+    }
     @include desktop {
       display: block;
     }

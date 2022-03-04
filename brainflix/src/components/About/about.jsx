@@ -1,13 +1,13 @@
 import "./about.scss";
 
-const About = (props) => {
-  console.log(props)
+const About = ({description}) => {
+  
   return (
     <article className="about">
       <hr className="about__divider"></hr>
       <div className="about__paragraph-container">
         <p className="about__paragraph">
-       {props.description}
+       {description}
         </p>
       </div>
     </article>

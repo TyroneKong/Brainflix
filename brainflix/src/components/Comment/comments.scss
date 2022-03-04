@@ -118,4 +118,12 @@ button:hover {
     border: 0.0625rem solid $mercury;
     margin-bottom: -0.625rem;
   }
+  &__btn {
+    @include tablet {
+      width: 25vw;
+    }
+    @include desktop {
+      width: 14vw;
+    }
+  }
 }
