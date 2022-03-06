@@ -63,7 +63,7 @@
       width: 50vw;
     }
     @include desktop {
-      height: 80%;
+      height: 75%;
       width: 40vw;
     }
   }
@@ -91,10 +91,10 @@
     align-items: center;
     margin-top: 1.25rem;
     @include tablet {
-      margin-left: 2.875rem;
+      margin-left: 1.875rem;
     }
     @include desktop {
-      margin-left: -1rem;
+      margin: -10px -60px;
     }
   }
 
@@ -104,29 +104,40 @@
     flex-direction: column;
   }
   &__input {
+    background-color: $alabasta;
     border: 1px solid $silver;
     height: 3.125rem;
     width: 90vw;
+    padding-left: 1.25rem;
     @include tablet {
+      height: 4.375rem;
       width: 80vw;
     }
     @include desktop {
-      height: 4.375rem;
-      width: 50vw;
+      width: 40vw;
     }
   }
-  & ::-webkit-input-placeholder {
-    @include subheaderMobile;
+  &__input::placeholder {
+    @include bodycopyMobile;
     @include tablet {
       @include subheaderDesktopTablet;
     }
   }
+  &__textarea::placeholder {
+    @include bodycopyMobile;
+    @include tablet {
+      @include subheaderDesktopTablet;
+    }
+  }
+
   &__textarea-label {
     color: silver;
     display: flex;
     flex-direction: column;
   }
   &__textarea {
+    padding: 1.25rem 1.25rem;
+    background-color: $alabasta;
     border: 1px solid $silver;
     height: 9.375rem;
     width: 90vw;
@@ -134,8 +145,13 @@
       width: 80vw;
     }
     @include desktop {
-      height: 12rem;
-      width: 50vw;
+      height: 13rem;
+      width: 40vw;
+    }
+  }
+  &__textarea-container {
+    @include tablet {
+      border-bottom: 2px solid $mercury;
     }
   }
   &__buttons {
@@ -152,11 +168,12 @@
       flex-direction: row;
     }
   }
-  &__button-cancel {
+  &__button--cancel {
     background-color: #ffff;
-    color: $brainflixBlue;
+    color: $buttonBlue;
   }
-  &__button-publish {
+  &__button--publish {
+    height: 3.75rem;
     width: 90vw;
     @include tablet {
       display: none;
@@ -165,17 +182,24 @@
       display: none;
     }
   }
-  &__button-publishDesktop {
+
+  &__button--publishDesktop {
     display: none;
     @include tablet {
       display: block;
+      position: relative;
     }
     @include desktop {
       display: block;
     }
   }
-  &__button-publishMobileImage {
+  &__button--publishMobileImage {
     position: relative;
+    right: 12.5rem;
+  }
+  &__button--publishDesktopImage {
+    position: relative;
+    right: 4.375rem;
   }
 }
 

@@ -33,9 +33,12 @@ class Conversation extends React.Component {
         console.log(response);
       })
       .catch((err) => console.log(err));
+    
   };
 
+  
   render() {
+    
     const { countComments } = this.props;
     return (
       <section className="conversation">

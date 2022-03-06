@@ -24,7 +24,6 @@ class Upload extends React.Component {
 
     return (
       <div>
-        <div className="upload__header"></div>
         <hr className="upload__divider"></hr>
         <div className="uploader__titles">
           <h1 className="uploader__heading">Upload Video</h1>
@@ -65,26 +64,26 @@ class Upload extends React.Component {
               </div>
 
               <div className="uploader__buttons">
-                <button type="submit" className="uploader__button-publish">
+                <button type="submit" className="uploader__button--publish">
                   <img
-                    className="uploader__button-publishMobileImage"
+                    className="uploader__button--publishMobileImage"
                     src={publishIcon}
                     alt="publish icon"
                   ></img>
                   PUBLISH
                 </button>
                 <Link to="/">
-                  <button type="button" className="uploader__button-cancel">
+                  <button type="button" className="uploader__button--cancel">
                     CANCEL
                   </button>
                 </Link>
 
                 <button
                   type="submit"
-                  className="uploader__button-publishDesktop"
+                  className="uploader__button--publishDesktop"
                 >
                   <img
-                    className="uploader__button--publishDeskstopImage"
+                    className="uploader__button--publishDesktopImage"
                     src={publishIcon}
                     alt="publish icon"
                   ></img>
