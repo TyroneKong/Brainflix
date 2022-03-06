@@ -16,6 +16,7 @@ class Home extends React.Component {
     currentComment: [],
     allComments: [],
     numberComments: [],
+    currentId: [],
   };
 
   componentDidMount() {
@@ -23,43 +24,48 @@ class Home extends React.Component {
   }
 
   getVideos() {
+    //call to retrieve all videos
     axios
       .get(`${url}/videos?api_key=${apiKey}`)
       .then((res) => {
         this.setState({
           allVideos: res.data,
         });
-        return this.getAllvideos(res.data[0].id);
+        //return function to retrieve video details of first element
+        return this.getVideoDetails(res.data[0].id);
       })
       .then((response) => {
-        // setting state using the getALlVideos functions
+        // settings state with data retrieved from video details
         this.setState({
           currentVideoObject: response.data,
           currentComment: response.data.comments,
           numberComments: response.data.comments.length,
+          currentId: response.data.id,
         });
       })
       .catch((err) => console.log(err));
   }
 
   // function to get all details of current object
-  getAllvideos(id) {
+  getVideoDetails(id) {
     return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${id}?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f'`
+      `https://project-2-api.herokuapp.com/videos/${id}?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`
     );
   }
 
-  // check if video doesnt match previous id set state to new object if true
+  // check if previous id doesnt match previous id using match and if true change the state
   componentDidUpdate(prevProps, prevState) {
     const videoId = this.props.match.params.id;
+    // console.log(this.props.match);
 
     if (videoId) {
       if (videoId !== prevProps.match.params.id) {
-        this.getAllvideos(videoId).then((response) => {
+        this.getVideoDetails(videoId).then((response) => {
           this.setState({
             currentVideoObject: response.data,
             currentComment: response.data.comments,
             numberComments: response.data.comments.length,
+            currentId: response.data.id,
           });
         });
       }
@@ -67,8 +73,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const { currentVideoObject, allVideos, currentComment, numberComments } =
-      this.state;
+    const {
+      currentVideoObject,
+      allVideos,
+      currentComment,
+      numberComments,
+      currentId,
+    } = this.state;
 
     return (
       <div className="wrapper">
@@ -77,8 +88,13 @@ class Home extends React.Component {
           <div className="main">
             <About description={currentVideoObject.description} />
 
-            <Conversation countComments={numberComments} />
-            <CommentList commentArray={currentComment} />
+            <Conversation
+              countComments={numberComments}
+              id={currentId}
+              videos={this.getVideos}
+              previousState={currentComment}
+            />
+            <CommentList commentArray={currentComment} id={currentId} />
           </div>
           <div className="next__video-main">
             <h3 className="next__videos-heading">NEXT VIDEOS</h3>

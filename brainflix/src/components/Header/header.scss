@@ -14,13 +14,14 @@ header {
   @include desktop {
     padding-left: 8.125rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
   }
   &__container {
     @include tablet {
       display: flex;
     }
   }
+
   &__logo-image {
     text-decoration: none;
     @include desktop {
@@ -44,10 +45,12 @@ header {
     margin-left: 20px;
     @include tablet {
       display: flex;
-      width: 25vw;
+      margin-right: -2.5rem;
+      width: 35vw;
       height: 3.125rem;
     }
     @include desktop {
+      margin-right: 0.625rem;
       margin-left: 6.25rem;
       width: 20vw;
     }

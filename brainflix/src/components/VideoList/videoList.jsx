@@ -9,7 +9,7 @@ const VideoList = ({ videoArr, currentvideo }) => {
     .filter((video) => video.id !== current.id)
     .map((video) => {
       return (
-        <Video 
+        <Video
           key={video.id}
           id={video.id}
           title={video.title}

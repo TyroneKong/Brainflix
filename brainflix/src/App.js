@@ -9,7 +9,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 class App extends Component {
   render() {
-    // console.log(numberComments);
     return (
       <div className="App">
         <Router>
@@ -17,6 +16,7 @@ class App extends Component {
 
           <Switch>
             <Route path="/" component={Home} exact />
+
             <Route path="/video/:id" component={Home} />
             <Route path="/upload" component={Upload} />
           </Switch>

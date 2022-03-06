@@ -14,8 +14,30 @@
       justify-content: space-around;
     }
   }
+
   &__heading {
     @include pageheaderMobile;
+    margin-top: 3.125rem;
+    @include tablet {
+      @include pageheaderDesktopTablet;
+      margin-top: 5rem;
+    }
+  }
+  &__titles {
+    margin-left: 1.5rem;
+    @include tablet {
+      margin-left: 4rem;
+    }
+    @include desktop {
+      margin-left: 6rem;
+    }
+  }
+  &__divider-tablet {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-top: 3.125rem;
+    }
   }
   &__thumbnail {
     @include subheaderMobile;
@@ -24,27 +46,38 @@
     align-items: center;
     @include tablet {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 2.5rem;
+    }
+    @include desktop {
+      margin-left: 5rem;
     }
   }
   &__thumbnail-image {
     border-radius: 2rem;
-    width: 100vw;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
     aspect-ratio: 16/9;
     @include tablet {
       width: 50vw;
     }
     @include desktop {
+      height: 80%;
       width: 40vw;
     }
   }
   &__thumbnail-heading {
-    padding-top: 70px;
+    @include sectionheaderMobile;
+    padding-top: 4.375rem;
+
     color: $silver;
+    @include tablet {
+      @include subheaderDesktopTablet;
+      font-weight: bold;
+    }
   }
-  &__heading-container {
-  }
+
   &__container {
     @include desktop {
       display: flex;
@@ -54,9 +87,15 @@
   &__form {
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 3.125rem;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    @include tablet {
+      margin-left: 2.875rem;
+    }
+    @include desktop {
+      margin-left: -1rem;
+    }
   }
 
   &__input-label {
@@ -66,10 +105,20 @@
   }
   &__input {
     border: 1px solid $silver;
-    height: 50px;
+    height: 3.125rem;
     width: 90vw;
+    @include tablet {
+      width: 80vw;
+    }
     @include desktop {
+      height: 4.375rem;
       width: 50vw;
+    }
+  }
+  & ::-webkit-input-placeholder {
+    @include subheaderMobile;
+    @include tablet {
+      @include subheaderDesktopTablet;
     }
   }
   &__textarea-label {
@@ -79,9 +128,13 @@
   }
   &__textarea {
     border: 1px solid $silver;
-    height: 150px;
+    height: 9.375rem;
     width: 90vw;
+    @include tablet {
+      width: 80vw;
+    }
     @include desktop {
+      height: 12rem;
       width: 50vw;
     }
   }
@@ -92,6 +145,7 @@
     @include tablet {
       display: flex;
       flex-direction: row;
+      margin-left: 18.75rem;
     }
     @include desktop {
       display: flex;
@@ -103,6 +157,7 @@
     color: $brainflixBlue;
   }
   &__button-publish {
+    width: 90vw;
     @include tablet {
       display: none;
     }
@@ -119,4 +174,11 @@
       display: block;
     }
   }
+  &__button-publishMobileImage {
+    position: relative;
+  }
+}
+
+.upload__divider {
+  margin-top: 1.25rem;
 }
