@@ -21,7 +21,7 @@ class Conversation extends React.Component {
   // make a post request with the new changed state
   postComment = (e) => {
     e.preventDefault();
-    const { id, videos } = this.props;
+    const { id, } = this.props;
     const body = { name: this.state.name, comment: this.state.comment };
 
     return axios
@@ -30,7 +30,7 @@ class Conversation extends React.Component {
         body
       )
       .then((response) => {
-        console.log(response);
+       window.location.reload();
       })
       .catch((err) => console.log(err));
     

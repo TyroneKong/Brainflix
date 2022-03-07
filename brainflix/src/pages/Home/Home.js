@@ -35,7 +35,7 @@ class Home extends React.Component {
         return this.getVideoDetails(res.data[0].id);
       })
       .then((response) => {
-        // settings state with data retrieved from video details
+        // setting state with data retrieved from video details
         this.setState({
           currentVideoObject: response.data,
           currentComment: response.data.comments,
