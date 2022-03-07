@@ -48,7 +48,7 @@ header {
       display: flex;
       margin-right: -2.5rem;
       width: 35vw;
-      height: 3.125rem;
+      height: 3.75rem;
     }
     @include desktop {
       margin-right: 0.625rem;
@@ -109,12 +109,13 @@ header {
     background-color: $buttonBlue;
     @include tablet {
       justify-content: space-around;
+      height: 3.75rem;
       width: 20vw;
       padding-right: 3.125rem;
     }
     @include desktop {
       margin-bottom: 10px;
-      height: 3.1rem;
+
       width: 10vw;
       padding-right: 1.875rem;
     }

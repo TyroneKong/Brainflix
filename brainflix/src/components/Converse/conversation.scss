@@ -122,6 +122,12 @@
       width: 40vw;
     }
   }
+  &__text::placeholder {
+    @include bodycopyMobile;
+    @include tablet {
+      @include bodycopyDesktopTablet;
+    }
+  }
   &__divide {
     border: 1px solid $mercury;
   }
