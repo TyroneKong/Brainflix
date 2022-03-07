@@ -44,11 +44,11 @@ header {
     padding: 0 1.875rem;
     width: 60vw;
     margin-left: 20px;
+    height: 3.75rem;
     @include tablet {
       display: flex;
       margin-right: -2.5rem;
       width: 35vw;
-      height: 3.75rem;
     }
     @include desktop {
       margin-right: 0.625rem;
@@ -95,7 +95,7 @@ header {
     text-decoration: none;
   }
   &__button {
-    height: 3.125rem;
+    height: 3.75rem;
     margin-right: 3rem;
     width: 75vw;
     border: none;
