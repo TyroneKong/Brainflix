@@ -1,6 +1,6 @@
 import Video from "./video";
 
-const VideoList = ({ clickHandler, videoArr, currentvideo }) => {
+const VideoList = ({ videoArr, currentvideo }) => {
   const videos = videoArr;
   const current = currentvideo;
 
@@ -16,7 +16,7 @@ const VideoList = ({ clickHandler, videoArr, currentvideo }) => {
           channel={video.channel}
           comment={video.comment}
           image={video.image}
-          func={clickHandler}
+          video={video.video}
         />
       );
     });

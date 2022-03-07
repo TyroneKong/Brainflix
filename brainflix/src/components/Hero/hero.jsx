@@ -9,6 +9,7 @@ import "./hero.scss";
 // import closeFullscreen from "../../assets/Icons/close_fullscreen.svg";
 
 const Hero = ({ current }) => {
+
   const timestamp = current.timestamp;
   const date = new Date(timestamp);
 

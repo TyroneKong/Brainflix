@@ -14,14 +14,16 @@ header {
   @include desktop {
     padding-left: 8.125rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
   }
   &__container {
     @include tablet {
       display: flex;
     }
   }
+
   &__logo-image {
+    text-decoration: none;
     @include desktop {
     }
   }
@@ -36,17 +38,20 @@ header {
   }
 
   &__input {
+    background-color: $alabasta;
     border-radius: 0.375rem;
     border: 2px solid $mercury;
     padding: 0 1.875rem;
     width: 60vw;
     margin-left: 20px;
+    height: 3.75rem;
     @include tablet {
       display: flex;
-      width: 25vw;
-      height: 3.125rem;
+      margin-right: -2.5rem;
+      width: 35vw;
     }
     @include desktop {
+      margin-right: 0.625rem;
       margin-left: 6.25rem;
       width: 20vw;
     }
@@ -86,9 +91,11 @@ header {
   @include desktop {
     margin-right: 6.25rem;
   }
-
+  &__link {
+    text-decoration: none;
+  }
   &__button {
-    height: 3.125rem;
+    height: 3.75rem;
     margin-right: 3rem;
     width: 75vw;
     border: none;
@@ -99,22 +106,23 @@ header {
     color: #ffff;
     padding-right: 5.25rem;
 
-    background-color: $brainflixBlue;
+    background-color: $buttonBlue;
     @include tablet {
       justify-content: space-around;
+      height: 3.75rem;
       width: 20vw;
       padding-right: 3.125rem;
     }
     @include desktop {
       margin-bottom: 10px;
-      height: 3.1rem;
+
       width: 10vw;
       padding-right: 1.875rem;
     }
   }
   &__icon {
     position: relative;
-    right: 1.75rem;
+    right: 3.75rem;
     @include tablet {
       position: relative;
       right: 0rem;

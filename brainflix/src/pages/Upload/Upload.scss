@@ -1,0 +1,221 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.uploader {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__header {
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__heading {
+    @include pageheaderMobile;
+    margin-top: 3.125rem;
+    @include tablet {
+      @include pageheaderDesktopTablet;
+      margin-top: 5rem;
+    }
+  }
+  &__titles {
+    margin-left: 1.5rem;
+    @include tablet {
+      margin-left: 4rem;
+    }
+    @include desktop {
+      margin-left: 6rem;
+    }
+  }
+  &__divider-tablet {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-top: 3.125rem;
+    }
+  }
+  &__thumbnail {
+    @include subheaderMobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 2.5rem;
+    }
+    @include desktop {
+      margin-left: 5rem;
+    }
+  }
+  &__thumbnail-image {
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    aspect-ratio: 16/9;
+    @include tablet {
+      width: 50vw;
+    }
+    @include desktop {
+      height: 80%;
+      width: 40vw;
+    }
+  }
+  &__thumbnail-heading {
+    @include sectionheaderMobile;
+    padding-top: 4.375rem;
+
+    color: $silver;
+    @include tablet {
+      @include subheaderDesktopTablet;
+      font-weight: bold;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.125rem;
+    align-items: center;
+    margin-top: 1.25rem;
+    @include tablet {
+      margin-left: 1.875rem;
+    }
+    @include desktop {
+      margin: -10px -10px;
+    }
+  }
+
+  &__input-label {
+    color: $silver;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  &__input {
+    background-color: $alabasta;
+    border: 1px solid $silver;
+    height: 4.125rem;
+    width: 90vw;
+    padding-left: 1.25rem;
+    @include tablet {
+      height: 4.375rem;
+      width: 80vw;
+    }
+    @include desktop {
+      width: 50vw;
+    }
+  }
+  &__input::placeholder {
+    @include bodycopyMobile;
+    @include tablet {
+      @include bodycopyDesktopTablet;
+    }
+  }
+  &__textarea::placeholder {
+    @include bodycopyMobile;
+    @include tablet {
+      @include bodycopyDesktopTablet;
+    }
+  }
+
+  &__textarea-label {
+    color: silver;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+  }
+  &__textarea {
+    padding: 1.25rem 1.25rem;
+    background-color: $alabasta;
+    border: 1px solid $silver;
+    height: 9.375rem;
+    width: 90vw;
+    @include tablet {
+      width: 80vw;
+    }
+    @include desktop {
+      height: 13rem;
+      width: 50vw;
+    }
+  }
+  &__textarea-container {
+    @include tablet {
+      border-bottom: 2px solid $mercury;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      margin-left: 20.75rem;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      margin-left: 29.75rem;
+    }
+  }
+  &__button--cancel {
+    background-color: #ffff;
+    color: $buttonBlue;
+  }
+  &__button--publish {
+    height: 3.75rem;
+    width: 90vw;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__button--publishDesktop {
+    display: none;
+    @include tablet {
+      display: block;
+      width: 25vw;
+      height: 3.75rem;
+      position: relative;
+    }
+    @include desktop {
+      display: block;
+
+      width: 10vw;
+    }
+  }
+  &__button--publishMobileImage {
+    position: relative;
+    right: 12.5rem;
+  }
+  &__button--publishDesktopImage {
+    @include tablet {
+      position: relative;
+      right: 5rem;
+    }
+    @include desktop {
+      position: relative;
+      right: 2rem;
+    }
+  }
+}
+
+.upload__divider {
+  margin-top: 1.25rem;
+}
