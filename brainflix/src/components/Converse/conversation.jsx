@@ -18,7 +18,7 @@ class Conversation extends React.Component {
     });
   };
 
-  // make a post request with the new changed state
+  // make a post request with the new changed state, temporary reload to test post
   postComment = (e) => {
     e.preventDefault();
     const { id, } = this.props;
