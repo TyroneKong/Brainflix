@@ -2,39 +2,38 @@ import commentIcon from "../../assets/Icons/add_comment.svg";
 import "./conversation.scss";
 import React from "react";
 import axios from "axios";
+const url = "https://project-2-api.herokuapp.com";
+const apiKey = "5fb42916-1146-4e86-8046-9b41e6cb4c0f";
+
 
 class Conversation extends React.Component {
-  state = {
-    name: "",
-    comment: "",
-  
-  };
 
-  // use an onchange handler to set state to user input
-  handleChange = (e) => {
-    this.setState({
-      name: "user:"  + Math.floor(Math.random() * 1000),
-      comment: e.target.value,
-    });
-  };
 
   // make a post request with the new changed state, temporary reload to test post
-  postComment = (e) => {
+  handleSubmit=(e)=>{
+   
     e.preventDefault();
-    const { id, } = this.props;
-    const body = { name: this.state.name, comment: this.state.comment };
+    const user = Math.floor(Math.random()* 1000)
+    const commentInput = e.target.commentfield.value
+    const { id, videos } = this.props;
+    console.log(id)
+    const body = { name: `user:${user}` , comment:commentInput};
 
-    return axios
+    axios
       .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`,
-        body
-      )
-      .then((response) => {
-       window.location.reload();
-      })
-      .catch((err) => console.log(err));
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`,body,{
+        
+        }).then(response=>{
+          console.log(response)
+          videos()
+        })
+        
+  }
+
+      
+
     
-  };
+  
 
   
   render() {
@@ -42,7 +41,7 @@ class Conversation extends React.Component {
     const { countComments } = this.props;
     return (
       <section className="conversation">
-        <form onSubmit={this.postComment} className="conversation__form">
+        <form onSubmit={this.handleSubmit} className="conversation__form">
           <div className="comment__section">
             <div className="conversation__comment-container">
               <p className="conversation__commentCount">
@@ -62,7 +61,7 @@ class Conversation extends React.Component {
                 htmlFor="comment"
                 id="comment"
                 className="conversation__text"
-                name="commenfield"
+                name="commentfield"
                 placeholder="Add a new comment"
                 required
               ></textarea>

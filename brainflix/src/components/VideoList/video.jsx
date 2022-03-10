@@ -12,7 +12,7 @@ const Video = ({ title, channel, image, id, video }) => {
               <Link  to={`/video/${id}`}>
                 
                 <video  className="next__image"   poster={image}>
-                  <source src={video}></source>
+                  <source src={video} type="video/mp4"></source>
                 </video>
                 
                 

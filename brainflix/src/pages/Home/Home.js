@@ -23,10 +23,10 @@ class Home extends React.Component {
     this.getVideos();
   }
 
-  getVideos() {
+  getVideos = () => {
     //call to retrieve all videos
     axios
-      .get(`${url}/videos?api_key=${apiKey}`)
+      .get(`http://localhost:8180/videos`)
       .then((res) => {
         this.setState({
           allVideos: res.data,
@@ -44,7 +44,7 @@ class Home extends React.Component {
         });
       })
       .catch((err) => console.log(err));
-  }
+  };
 
   // function to get all details of current object
   getVideoDetails(id) {
@@ -91,7 +91,7 @@ class Home extends React.Component {
             <Conversation
               countComments={numberComments}
               id={currentId}
-              videos={this.getVideos}
+              videos={this.getVideoDetails}
               previousState={currentComment}
             />
             <CommentList commentArray={currentComment} id={currentId} />
