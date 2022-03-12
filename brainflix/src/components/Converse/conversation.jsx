@@ -5,39 +5,26 @@ import axios from "axios";
 const url = "https://project-2-api.herokuapp.com";
 const apiKey = "5fb42916-1146-4e86-8046-9b41e6cb4c0f";
 
-
 class Conversation extends React.Component {
-
-
   // make a post request with the new changed state, temporary reload to test post
-  handleSubmit=(e)=>{
-   
+  handleSubmit = (e) => {
     e.preventDefault();
-    const user = Math.floor(Math.random()* 1000)
-    const commentInput = e.target.commentfield.value
+
+    const commentInput = e.target.commentfield.value;
     const { id, videos } = this.props;
-    console.log(id)
-    const body = { name: `user:${user}` , comment:commentInput};
+    console.log(id);
 
     axios
-      .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`,body,{
-        
-        }).then(response=>{
-          console.log(response)
-          videos()
-        })
-        
-  }
+      .post(`http://localhost:8180/videos/${id}/comments`, {
+        comment: commentInput,
+      })
+      .then((response) => {
+        console.log(response);
+        return videos();
+      });
+  };
 
-      
-
-    
-  
-
-  
   render() {
-    
     const { countComments } = this.props;
     return (
       <section className="conversation">

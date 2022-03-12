@@ -47,10 +47,19 @@ class Home extends React.Component {
   };
 
   // function to get all details of current object
-  getVideoDetails(id) {
-    return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${id}?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`
-    );
+  async getVideoDetails(id) {
+    try {
+      const response = await axios.get(`http://localhost:8180/videos/${id}`);
+      // setting state with data retrieved from video details
+      this.setState({
+        currentVideoObject: response.data,
+        currentComment: response.data.comments,
+        numberComments: response.data.comments.length,
+        currentId: response.data.id,
+      });
+    } catch (err) {
+      return console.log(err);
+    }
   }
 
   // check if previous id doesnt match previous id using match and if true change the state
@@ -91,7 +100,7 @@ class Home extends React.Component {
             <Conversation
               countComments={numberComments}
               id={currentId}
-              videos={this.getVideoDetails}
+              videos={this.getVideos}
               previousState={currentComment}
             />
             <CommentList commentArray={currentComment} id={currentId} />

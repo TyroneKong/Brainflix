@@ -3,14 +3,28 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./Upload.scss";
 import publishIcon from "../../assets/Icons/publish.svg";
+import axios from "axios";
+import Header from "../../components/Header/header";
 
 class Upload extends React.Component {
   state = {
     redirect: false,
   };
 
+  upload = () => {};
+
   handleSubmit = (e) => {
     e.preventDefault();
+    const title = e.target.title.value;
+    const description = e.target.description.value;
+    axios
+      .post(`http://localhost:8180/videos`, {
+        title: title,
+        description: description,
+      })
+      .then((response) => {
+        console.log(response);
+      });
     alert("Thank you for your submission");
     this.setState({ redirect: true });
   };
@@ -36,8 +50,8 @@ class Upload extends React.Component {
             <div className="uploader__thumbnail">
               <img
                 className="uploader__thumbnail-image"
-                src={thumbnailImage}
-                alt="bicycle handlebars"
+                src="http://localhost:8180/images/fashion.jpg"
+                alt="fashion picture"
               ></img>
             </div>
 
@@ -59,6 +73,7 @@ class Upload extends React.Component {
                   <textarea
                     className="uploader__textarea"
                     placeholder="Add a description to your video"
+                    name="description"
                   ></textarea>
                 </label>
               </div>
