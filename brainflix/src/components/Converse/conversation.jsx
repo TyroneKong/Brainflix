@@ -2,25 +2,22 @@ import commentIcon from "../../assets/Icons/add_comment.svg";
 import "./conversation.scss";
 import React from "react";
 import axios from "axios";
-const url = "https://project-2-api.herokuapp.com";
-const apiKey = "5fb42916-1146-4e86-8046-9b41e6cb4c0f";
 
 class Conversation extends React.Component {
   // make a post request with the new changed state, temporary reload to test post
+
   handleSubmit = (e) => {
     e.preventDefault();
 
     const commentInput = e.target.commentfield.value;
-    const { id, videos } = this.props;
-    console.log(id);
+    const { id, videos, currentVideo } = this.props;
 
     axios
       .post(`http://localhost:8180/videos/${id}/comments`, {
         comment: commentInput,
       })
       .then((response) => {
-        console.log(response);
-        return videos();
+        videos();
       });
   };
 

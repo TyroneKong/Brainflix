@@ -1,10 +1,8 @@
-import thumbnailImage from "../../assets/Images//Upload-video-preview.jpg";
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./Upload.scss";
 import publishIcon from "../../assets/Icons/publish.svg";
 import axios from "axios";
-import Header from "../../components/Header/header";
 
 class Upload extends React.Component {
   state = {
@@ -37,7 +35,7 @@ class Upload extends React.Component {
     }
 
     return (
-      <div>
+      <>
         <hr className="upload__divider"></hr>
         <div className="uploader__titles">
           <h1 className="uploader__heading">Upload Video</h1>
@@ -108,7 +106,7 @@ class Upload extends React.Component {
             </form>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
