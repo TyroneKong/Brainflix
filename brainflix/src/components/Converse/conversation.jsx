@@ -8,24 +8,29 @@ class Conversation extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
     const commentInput = e.target.commentfield.value;
-    const { id, videos, currentVideo } = this.props;
+    const { id, videos } = this.props;
 
     axios
       .post(`http://localhost:8180/videos/${id}/comments`, {
         comment: commentInput,
       })
       .then((response) => {
-        videos();
+        console.log(response);
+        videos(id);
       });
+    document.getElementById("commentForm").reset();
   };
 
   render() {
     const { countComments } = this.props;
     return (
       <section className="conversation">
-        <form onSubmit={this.handleSubmit} className="conversation__form">
+        <form
+          id="commentForm"
+          onSubmit={this.handleSubmit}
+          className="conversation__form"
+        >
           <div className="comment__section">
             <div className="conversation__comment-container">
               <p className="conversation__commentCount">

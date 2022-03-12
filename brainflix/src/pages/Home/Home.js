@@ -47,7 +47,6 @@ class Home extends React.Component {
           numberComments: response.data.comments.length,
           currentId: response.data.id,
         });
-        window.scroll(0, 0);
       });
     } catch (err) {
       return console.log(err);
@@ -61,6 +60,7 @@ class Home extends React.Component {
     if (videoId) {
       if (videoId !== prevProps.match.params.id) {
         this.getVideoDetails(videoId);
+        window.scroll(0, 0);
       }
     }
   }
