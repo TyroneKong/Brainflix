@@ -4,45 +4,33 @@ import React from "react";
 import axios from "axios";
 
 class Conversation extends React.Component {
-  state = {
-    name: "",
-    comment: "",
-  
-  };
-
-  // use an onchange handler to set state to user input
-  handleChange = (e) => {
-    this.setState({
-      name: "user:"  + Math.floor(Math.random() * 1000),
-      comment: e.target.value,
-    });
-  };
-
   // make a post request with the new changed state, temporary reload to test post
-  postComment = (e) => {
-    e.preventDefault();
-    const { id, } = this.props;
-    const body = { name: this.state.name, comment: this.state.comment };
 
-    return axios
-      .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`,
-        body
-      )
-      .then((response) => {
-       window.location.reload();
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const commentInput = e.target.commentfield.value;
+    const { id, videos } = this.props;
+
+    axios
+      .post(`http://localhost:8180/videos/${id}/comments`, {
+        comment: commentInput,
       })
-      .catch((err) => console.log(err));
-    
+      .then((response) => {
+        console.log(response);
+        videos(id);
+      });
+    document.getElementById("commentForm").reset();
   };
 
-  
   render() {
-    
     const { countComments } = this.props;
     return (
       <section className="conversation">
-        <form onSubmit={this.postComment} className="conversation__form">
+        <form
+          id="commentForm"
+          onSubmit={this.handleSubmit}
+          className="conversation__form"
+        >
           <div className="comment__section">
             <div className="conversation__comment-container">
               <p className="conversation__commentCount">
@@ -62,7 +50,7 @@ class Conversation extends React.Component {
                 htmlFor="comment"
                 id="comment"
                 className="conversation__text"
-                name="commenfield"
+                name="commentfield"
                 placeholder="Add a new comment"
                 required
               ></textarea>
