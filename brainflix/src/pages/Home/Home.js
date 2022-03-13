@@ -5,8 +5,6 @@ import Conversation from "../../components/Converse/conversation";
 import CommentList from "../../components/Comment/commentList";
 import VideoList from "../../components/VideoList/videoList";
 import axios from "axios";
-const url = "https://project-2-api.herokuapp.com";
-const apiKey = "5fb42916-1146-4e86-8046-9b41e6cb4c0f";
 
 class Home extends React.Component {
   // managing state
@@ -23,51 +21,46 @@ class Home extends React.Component {
     this.getVideos();
   }
 
-  getVideos() {
+  getVideos = () => {
     //call to retrieve all videos
     axios
-      .get(`${url}/videos?api_key=${apiKey}`)
+      .get(`http://localhost:8180/videos`)
       .then((res) => {
         this.setState({
           allVideos: res.data,
         });
         //return function to retrieve video details of first element
-        return this.getVideoDetails(res.data[0].id);
+        this.getVideoDetails(res.data[0].id);
       })
-      .then((response) => {
+      .catch((err) => console.log(err));
+  };
+
+  // function to get all details of current object
+  async getVideoDetails(id) {
+    try {
+      await axios.get(`http://localhost:8180/videos/${id}`).then((response) => {
         // setting state with data retrieved from video details
+        console.log(id);
         this.setState({
           currentVideoObject: response.data,
           currentComment: response.data.comments,
           numberComments: response.data.comments.length,
           currentId: response.data.id,
         });
-      })
-      .catch((err) => console.log(err));
+      });
+    } catch (err) {
+      return console.log(err);
+    }
   }
 
-  // function to get all details of current object
-  getVideoDetails(id) {
-    return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${id}?api_key='5fb42916-1146-4e86-8046-9b41e6cb4c0f`
-    );
-  }
-
-  // check if previous id doesnt match previous id using match and if true change the state
+  // check if previous id !matches and if true invoke function to change state
   componentDidUpdate(prevProps, prevState) {
     const videoId = this.props.match.params.id;
-    // console.log(this.props.match);
 
     if (videoId) {
       if (videoId !== prevProps.match.params.id) {
-        this.getVideoDetails(videoId).then((response) => {
-          this.setState({
-            currentVideoObject: response.data,
-            currentComment: response.data.comments,
-            numberComments: response.data.comments.length,
-            currentId: response.data.id,
-          });
-        });
+        this.getVideoDetails(videoId);
+        window.scroll(0, 0);
       }
     }
   }
@@ -89,6 +82,7 @@ class Home extends React.Component {
             <About description={currentVideoObject.description} />
 
             <Conversation
+              currentVideo={currentVideoObject}
               countComments={numberComments}
               id={currentId}
               videos={this.getVideos}
