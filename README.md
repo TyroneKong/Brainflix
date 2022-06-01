@@ -9,6 +9,7 @@
 - [Screenshot](#screenshot)
 
 - [Built with](#built-with)
+- [How to install](#how-to-install)
  
 - [Author](#author)
 
@@ -22,7 +23,7 @@
 ![](./images/brainflix.png)
 
 
-
+## How to install
 
 
 ### Built with
