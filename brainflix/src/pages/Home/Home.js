@@ -60,7 +60,6 @@ class Home extends React.Component {
     if (videoId) {
       if (videoId !== prevProps.match.params.id) {
         this.getVideoDetails(videoId);
-        window.scroll(0, 0);
       }
     }
   }
